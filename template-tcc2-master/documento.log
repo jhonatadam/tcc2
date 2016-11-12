@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  12 NOV 2016 07:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  12 NOV 2016 08:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1491,14 +1491,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 LaTeX Warning: Unused global option(s):
     [section=title].
 
-(./documento.aux
-
-LaTeX Warning: Label `figura-1' multiply defined.
-
-
-LaTeX Warning: Label `qua:exemplo-1' multiply defined.
-
-)
+(./documento.aux)
 \openout1 = `documento.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
@@ -1780,57 +1773,24 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
  [18
 
 ] [19] [20] [21]
-[22] [23] [24]) (./elementos-textuais/metodologia.tex [25] [26
-
-]
-<figuras/figura-1.png, id=271, 413.545pt x 311.1625pt>
-File: figuras/figura-1.png Graphic file (type png)
-
-<use figuras/figura-1.png>
-Package pdftex.def Info: figuras/figura-1.png used on input line 39.
-(pdftex.def)             Requested size: 413.54398pt x 311.16174pt.
-File: figuras/figura-1.png Graphic file (type png)
- <use figuras/figura-1.png>
-Package pdftex.def Info: figuras/figura-1.png used on input line 39.
-(pdftex.def)             Requested size: 413.54398pt x 311.16174pt.
- [27 <./figuras/figura-1.png>] <figuras/figura-2.png, id=279, 338.26375pt x 323
-.2075pt>
-File: figuras/figura-2.png Graphic file (type png)
-
-<use figuras/figura-2.png>
-Package pdftex.def Info: figuras/figura-2.png used on input line 52.
-(pdftex.def)             Requested size: 270.61136pt x 258.56635pt.
-File: figuras/figura-2.png Graphic file (type png)
- <use figuras/figura-2.png>
-Package pdftex.def Info: figuras/figura-2.png used on input line 52.
-(pdftex.def)             Requested size: 270.61136pt x 258.56635pt.
-)
-(./elementos-textuais/resultados.tex [28 <./figuras/figura-2.png>])
-(./elementos-textuais/discussao.tex [29
-
-])
-(./elementos-textuais/consideracoes.tex [30
-
-]) (./documento.bbl [31
-
-]
+[22] [23]) (./documento.bbl [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 82.
-) (./elementos-pos-textuais/apendices/historico-de-mudancas.tex [32
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 68.
+) (./elementos-pos-textuais/apendices/historico-de-mudancas.tex [25
 
 ])
-(./elementos-pos-textuais/apendices/lorem-ipsum.tex [33
+(./elementos-pos-textuais/apendices/lorem-ipsum.tex [26
 
 ])
-(./elementos-pos-textuais/anexos/exemplo-de-anexo.tex [34
+(./elementos-pos-textuais/anexos/exemplo-de-anexo.tex [27
 
 ])
-(./elementos-pos-textuais/anexos/dinamica-das-classes-sociais.tex [35
+(./elementos-pos-textuais/anexos/dinamica-das-classes-sociais.tex [28
 
 ])
 
@@ -1838,7 +1798,11 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[36
+
+Package caption Warning: Unused \captionsetup[figure] on input line 141.
+See the caption package documentation for explanation.
+
+[29
 
 ]
 \tf@lof=\write8
@@ -1863,15 +1827,15 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 206.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 25189 strings out of 493029
- 385235 string characters out of 6136234
- 730227 words of memory out of 5000000
- 27974 multiletter control sequences out of 15000+600000
+ 25103 strings out of 493029
+ 383622 string characters out of 6136234
+ 729174 words of memory out of 5000000
+ 27921 multiletter control sequences out of 15000+600000
  60445 words of font info for 202 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,92p,2035b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1884,10 +1848,10 @@ urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (38 pages, 509719 bytes).
+Output written on documento.pdf (31 pages, 361692 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 398 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
- 27900 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 383 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 27850 words of extra memory for PDF output out of 29859 (max. 10000000)
 

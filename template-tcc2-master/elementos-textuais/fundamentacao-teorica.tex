@@ -70,33 +70,20 @@ $\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4\end{pmatrix}$
 
 Como ilustração, considere o seguinte exemplo de \citeonline{hillier2010introduccao}:
 
-	\textbf{Exemplo 2.} Uma determinada empresa fabrica produtos de vidro de alta qualidade, entre os quais janelas e portas de vidro. A empresa possui três fábricas industriais. As esquadrias de alumínio e ferragens são feitas na Fábrica 1, as esquadrias de madeira são produzidas na Fábrica 2 e, finalmente, a Fábrica 3 produz o vidro e monta os produtos. 
+	\textbf{Exemplo 2.} Uma determinada empresa fabrica produtos de vidro, entre os quais janelas e portas de vidro. A empresa possui três fábricas industriais. As esquadrias de alumínio e ferragens são feitas na Fábrica 1, as esquadrias de madeira são produzidas na Fábrica 2 e, finalmente, a Fábrica 3 produz o vidro e monta os produtos. 
 
-Em consequência da queda nos ganhos, a direção decidiu modernizar a linha de produtos da empresa. Produtos não rentáveis estão sendo descontinuados, liberando capacidade produtiva para o lançamento de dois novos produtos com grande potencial de vendas:
+A empresa decidiu que produtos não rentáveis estão sendo descontinuados, liberando capacidade produtiva para o lançamento de dois novos produtos com grande potencial de vendas:
 
 \begin{alineas} 
 \item[] \textbf{Produto 1}: Uma porta de vidro de 2,5 m com esquadria de alumínio
 \item[] \textbf{Produto 2}: Uma janela duplamente adornada com esquadrias de madeira de $1,20 \times 1,80 m$ 
 \end{alineas} 
 
-O produto 1 requer parte da capacidade produtiva das Fábricas 1 e 3, mas nenhuma da Fábrica 2. O produto 2 precisa apenas das Fábricas 2 e 3. A divisão de marketing concluiu que a empresa poderia vender tanto quanto fosse possível produzir desses produtos por essas fábricas. Entretanto, pelo fato de ambos os produtos poderem estar competindo pela mesma capacidade produtiva na Fábrica 3, não está claro qual mix dos dois produtos seria o mais lucrativo. Portanto, foi constituída uma equipe de PO para estudar essa questão. A equipe de PO começou promovendo discussões com a alta direção para identificar os objetivos da diretoria para tal estudo. Essas discussões levaram à seguinte definição do problema: 
+O produto 1 requer parte da capacidade produtiva das Fábricas 1 e 3, mas nenhuma da Fábrica 2. O produto 2 precisa apenas das Fábricas 2 e 3. A empresa poderia vender tanto quanto fosse possível produzir desses produtos por essas fábricas. Entretanto, pelo fato de ambos os produtos poderem estar competindo pela mesma capacidade produtiva na Fábrica 3, não está claro qual mix dos dois produtos seria o mais lucrativo. O problema então é definido da seguinte forma: 
 
 Determinar quais devem ser as taxas de produção para ambos os produtos de modo a maximizar o lucro total, sujeito às restrições impostas pelas capacidades produtivas limitadas disponíveis nas três fábricas. (Cada produto será fabricado em lotes de 20, de forma que a taxa de produção é definida como o número de lotes produzidos por semana.) É permitida qualquer combinação de taxas de produção que satisfaça essas restrições, inclusive não produzir nada de um produto e o máximo possível do outro. 
 
-A equipe de PO também identificou os dados que precisavam ser coletados:
-
-\begin{alineas} 
-\item[1.] Número de horas de tempo de produção disponível por semana em cada fábrica para esses novos produtos. (A maior parte do tempo nessas fábricas já está comprometida com os produtos atuais, de modo que a capacidade disponível para os novos produtos é bastante limitada.)
-\item[2.] Número de horas de tempo de produção usado em cada fábrica para cada lote produzido de cada novo produto.
-\item[3.] Lucro por lote produzido de cada novo produto. Foi escolhido o lucro por lote produzido como uma medida apropriada após a equipe de PO ter concluído que o incremento de lucro de cada lote adicional produzido ser aproximadamente constante independentemente
-do número total de lotes produzidos. Pelo fato de nenhum custo adicional incorrer para o início da produção e a comercialização de tais produtos, o lucro total de cada um deles é aproximadamente esse lucro por lote vezes o número de lotes produzidos. 
-\end{alineas} 
-
-Obter estimativas razoáveis dessas quantidades exigia conseguir o apoio de pessoal-chave em várias unidades da empresa. O pessoal da divisão de manufatura forneceu os dados da primeira categoria citada anteriormente. Desenvolver estimativas para a segunda catego-
-ria de dados exigia alguma análise por parte dos engenheiros de produção envolvidos no desenvolvimento de processos de produção para os novos produtos. Analisando-se os dados de custos obtidos desses mesmos engenheiros e da divisão de marketing, juntamente com
-uma decisão de preços da divisão de marketing, o departamento de contabilidade desenvolveu estimativas para a terceira categoria.
-
-Os dados coletados foram os seguintes:
+Obtendo estimativas razoáveis, os dados coletados foram os seguintes:
 
 \begin{alineascomponto}
 \item A Fábrica 1 leva uma hora para produzir um lote do produto 1 e tem quatro horas de produção disponíveis por semana.
@@ -105,9 +92,7 @@ Os dados coletados foram os seguintes:
 \item O lucro por lote obtido pelo produto 1 é de U\$ 3.000 e o lucro por lote do produto 2 é U\$ 5.000.
 \end{alineascomponto}
 
-A equipe de PO reconheceu imediatamente que se tratava de um problema de programação linear do clássico tipo mix de produtos e então essa equipe empreendeu a formulação do modelo matemático correspondente.
-
-Para formular o modelo matemático (PL) para esse problema, façamos
+Para formular o modelo matemático (PL) para esse problema, façamos:
 \begin{alineas}
 \item[] $x_1 =$ número de lotes do produto 1 produzido semanalmente
 \item[] $x_2 =$ número de lotes do produto 2 produzido semanalmente
