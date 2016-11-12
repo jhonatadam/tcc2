@@ -1,0 +1,53 @@
+\changetocdepth {4}
+\select@language {brazil}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{14}{chapter.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Trabalhos Relacionados}}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}Quando parece ser cab\IeC {\'\i }vel o inverso}{17}{section.2.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}}{18}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Programa\IeC {\c c}\IeC {\~a}o Linear}{18}{subsection.3.0.1}
+\contentsline {subsection}{\numberline {3.0.2}Programa\IeC {\c c}\IeC {\~a}o Inteira}{23}{subsection.3.0.2}
+\contentsline {subsection}{\numberline {3.0.3}\textit {Educational Timetabling}}{24}{subsection.3.0.3}
+\contentsline {subsubsection}{\numberline {3.0.3.1}\textit {School Timetabling}}{24}{subsubsection.3.0.3.1}
+\contentsline {subsubsection}{\numberline {3.0.3.2}\textit {Course Timetabling}}{25}{subsubsection.3.0.3.2}
+\contentsline {subsubsection}{\numberline {3.0.3.3}\textit {Examination Timetabling}}{25}{subsubsection.3.0.3.3}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {MATERIAIS E M\IeC {\'E}TODOS}}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}T\IeC {\'\i }tulo da se\IeC {\c c}\IeC {\~a}o secund\IeC {\'a}ria}{26}{section.4.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Resultados}}{29}{chapter.5}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Discuss\IeC {\~a}o}}{30}{chapter.6}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Considera\IeC {\c c}\IeC {\~o}es Finais}}{31}{chapter.7}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\uppercase {REFER\^ENCIAS}}{32}{section*.15}
+\renewcommand *{\cftappendixname }{AP\^ENDICE \space }
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\normalfont \bfseries {LOREM IPSUM}}{33}{appendix.A}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\normalfont \bfseries {MODELO DE CAPA}}{34}{appendix.B}
+\cftinsert {AAA}
+\renewcommand *{\cftappendixname }{ANEXO \space }
+\renewcommand *{\cftappendixname }{\normalfont \bfseries ANEXO \space }
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\normalfont \bfseries {EXEMPLO DE ANEXO}}{35}{appendix.anexochapback.1}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\normalfont \bfseries {DIN\IeC {\^A}MICA DAS CLASSES SOCIAIS}}{36}{appendix.anexochapback.2}

@@ -1,22 +1,181 @@
 \chapter{Fundamentação Teórica}
 \label{cap:fundamentacao-teorica}
 
-Esta Seção contém os conceitos que fundamentarão as análises. Por exemplo, se será feita a avaliação de algum artefato, aqui se deve caracterizar quais aspectos deste artefato serão considerado, ou seja, quais os critérios de análise a serem considerados no trabalho. Também se informa qual o valor desejável para cada um desses critérios.
+Esse capítulo apresenta os conceitos fundamentais para a compreensão deste trabalho. A Seção 4.1 apresenta os conceitos de Programação Linear. A Seção 4.2 descreve Programação Inteira, evidenciando o que difere um modelo de Programação Inteira de um modelo de Programação Linear. A Seção 4.3 apresenta uma visão geral dos problemas de \textit{Educational Timetabling}. Para detalhes além dos apresentados a seguir, indicamos: \citeonline{schrijver1998theory},  \citeonline{bertsimas1997introduction} e \citeonline{hillier2010introduccao}.
 
-A fundamentação teórica NÃO é um glossário de termos, em que o autor comprova que os compreende. Sua função é deixar claro qual o significado adotado para cada conceito utilizado em sua pesquisa. Por exemplo, o que é Computação em Nuvem no seu trabalho? Você abordará questões de software ou de infraestrutura, ou a visão do usuário final? Caso existam diferentes abordagens para um mesmo conceito, deixe claro qual aquela que será adotada. 
+\subsection{Programação Linear}
 
-O título desta Seção pode ser alterado de “Fundamentação Teórica” para algum tema central do seu trabalho. Tipicamente, ela contém muitas citações indicando os autores que guiaram sua elaboração. Na sequência, há muitos exemplos de como se referir e citar os textos utilizados.
+Um modelo de \textbf{Programação Linear (PL)} é constituído por um conjunto de variáveis. Essas variáveis compõem uma função linear objetivo, além de um conjunto de equações e inequações lineares que representam as restrições do modelo. Solucionar um problema de PL é encontrar um valor para cada uma das variáveis que respeite todas as restrições e minimize o custo da função objetivo \cite{bertsimas1997introduction}. 
+
+Considere o seguinte problema de PL\footnote{O problema e os conceitos apresentados adiante foram retirados de \citeonline{bertsimas1997introduction}}:
+
+\textbf{Exemplo 1.}
+
+\begin{equation*}
+\begin{aligned}
+& \text{minimizar} \\
+& &  2x_1 - x_2 + 4x_3 \\
+& \text{sujeito a} \\
+& & x_1 + x_2 + x_4 \leq 2 \\
+& & 3x_2 - x_3 = 5 \\
+& & x_3 + x_4 \geq 3 \\
+& & x_1 \geq 0 \\ 
+& & x_3 \leq 0
+\end{aligned}
+\end{equation*}
+
+No exemplo acima, $x_1$, $x_2$, $x_3$ e $x_4$ são as variáveis do modelo. São compostas por elas a \textbf{função objetivo} $2x_1 - x_2 + 4x_3$, e as \textbf{restrições} $x_1 + x_2 + x_4 \leq 2$, $3x_2 - x_3 = 5$, $x_3 + x_4 \geq 3$, $x_1 \geq 0$ e $x_3 \leq 0$. As duas últimas restrições são \textbf{restrições de integridade} das variáveis $x_1$ e $x_3$. Essas restrições têm como intuito estabelecer os limites (superiores ou inferiores) das variáveis. As demais variáveis que não possuem restrições de integridade, são chamadas \textbf{variáveis livres} e podem assumir qualquer valor  pertencente ao conjunto dos números reais. 
+
+As restrições representadas por inequações ou equações podem assumir os formatos $ax^T \leq b$, $ax^T \geq b$ ou $ax^T = b$, onde $a = (a_1, a_2, ..., a_n)$ e $x = (x_1, x_2, ..., x_n)$ são \textbf{vetores linha}, e $b$ é um \textbf{escalar} qualquer (mais à frente veremos uma forma mais geral de representar todas as restrições). Se considerarmos a segunda restrição do exemplo acima, temos $a = (0, 3, -1, 0)$ e $b = 5$. A função objetivo tem a forma $cx^T$, onde $c = (c_1, c_2, ..., c_n)$ e $x = (x_1, x_2, ..., x_n)$. As expressões $cx^T$ da função objetivo e $ax^T$ das restrições podem ser escritas como $\sum_{i = 1}^n c_ix_i$ e $\sum_{i = 1}^n a_ix_i$, respectivamente.
+
+As variáveis envolvidas no modelo são chamadas \textbf{variáveis de decisão}. Uma valoração para as variáveis de decisão que satisfaça todas as restrições é chamada \textbf{solução viável}. O conjunto de todas as soluções viáveis é chamado \textbf{conjunto viável} ou \textbf{conjunto de possibilidades}. Dado um conjunto de soluções viáveis de um problema de PL qualquer, a solução viável  pertencente a esse conjunto que tenha menor valor segundo a função objetivo é chamada \textbf{solução viável ótima} ou simplesmente \textbf{solução ótima}. Quando a natureza do problema é de maximização, pode-se tratar a função de maximização utilizando seu valor oposto e transformando-a em uma função de minimização equivalente. Note que maximizar $cx^T$ equivale a minimizar $-cx^T$.
+
+Um problema de PL pode ter sua representação generalizada da seguinte forma: considere as restrições representadas por equações ($ax^T = b$). Podemos reescrevê-las como um par de inequações $ax^T \leq b$ e $ax^T \geq b$. Restrições com o formato $ax^T \leq b$, podem ser reescritas como $(-a)x^T \geq -b$ e restrições de integridade podem ser escritas como inequações, onde $a$ tem apenas um valor não nulo. Podemos também representar todos coeficientes de todas as restrições como uma única matriz $A$ de dimensões $m \times n$, onde cada linha é um vetor de coeficientes de uma única restrição. As variáveis de decisão seriam um vetor $x = (x_1, x_2, ..., x_n)$ e $b$ representaria o vetor $(b_1, b_2, ..., b_m)$. 
+
+Portanto, podemos generalizar um problema de PL escrevendo-o da seguinte forma:
+
+\begin{equation*}
+\begin{aligned}
+& \text{minimizar} \\
+& &  cx^T \\
+& \text{sujeito a} \\
+& & Ax^T \geq b^T 
+\end{aligned}
+\end{equation*}
+
+Reescrevendo as restrições do Exemplo 1, temos:
+
+\begin{center}
+$\begin{pmatrix} 
+-1 & -1 & 0  & -1 \\ 
+ 0 &  3 & -1 &  0 \\
+ 0 & -3 &  1 &  0 \\
+ 0 &  0 &  1 &  1 \\
+ 1 &  0 &  0 &  0 \\
+ 0 &  0 & -1 &  0 
+\end{pmatrix}$ 
+$\cdot $ 
+$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4\end{pmatrix}$ 
+$\geq$
+$\begin{pmatrix} -2 \\ 5 \\ -5\\ 3 \\ 0 \\ 0\end{pmatrix}$
+\end{center}
+
+E para a função objetivo:
+
+\begin{center}
+$\begin{pmatrix} 2 & -1 & 4 & 0\end{pmatrix}$
+$\cdot $ 
+$\begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4\end{pmatrix}$ 
+\end{center}
+
+Como ilustração, considere o seguinte exemplo de \citeonline{hillier2010introduccao}:
+
+	\textbf{Exemplo 2.} Uma determinada empresa fabrica produtos de vidro de alta qualidade, entre os quais janelas e portas de vidro. A empresa possui três fábricas industriais. As esquadrias de alumínio e ferragens são feitas na Fábrica 1, as esquadrias de madeira são produzidas na Fábrica 2 e, finalmente, a Fábrica 3 produz o vidro e monta os produtos. 
+
+Em consequência da queda nos ganhos, a direção decidiu modernizar a linha de produtos da empresa. Produtos não rentáveis estão sendo descontinuados, liberando capacidade produtiva para o lançamento de dois novos produtos com grande potencial de vendas:
+
+\begin{alineas} 
+\item[] \textbf{Produto 1}: Uma porta de vidro de 2,5 m com esquadria de alumínio
+\item[] \textbf{Produto 2}: Uma janela duplamente adornada com esquadrias de madeira de $1,20 \times 1,80 m$ 
+\end{alineas} 
+
+O produto 1 requer parte da capacidade produtiva das Fábricas 1 e 3, mas nenhuma da Fábrica 2. O produto 2 precisa apenas das Fábricas 2 e 3. A divisão de marketing concluiu que a empresa poderia vender tanto quanto fosse possível produzir desses produtos por essas fábricas. Entretanto, pelo fato de ambos os produtos poderem estar competindo pela mesma capacidade produtiva na Fábrica 3, não está claro qual mix dos dois produtos seria o mais lucrativo. Portanto, foi constituída uma equipe de PO para estudar essa questão. A equipe de PO começou promovendo discussões com a alta direção para identificar os objetivos da diretoria para tal estudo. Essas discussões levaram à seguinte definição do problema: 
+
+Determinar quais devem ser as taxas de produção para ambos os produtos de modo a maximizar o lucro total, sujeito às restrições impostas pelas capacidades produtivas limitadas disponíveis nas três fábricas. (Cada produto será fabricado em lotes de 20, de forma que a taxa de produção é definida como o número de lotes produzidos por semana.) É permitida qualquer combinação de taxas de produção que satisfaça essas restrições, inclusive não produzir nada de um produto e o máximo possível do outro. 
+
+A equipe de PO também identificou os dados que precisavam ser coletados:
+
+\begin{alineas} 
+\item[1.] Número de horas de tempo de produção disponível por semana em cada fábrica para esses novos produtos. (A maior parte do tempo nessas fábricas já está comprometida com os produtos atuais, de modo que a capacidade disponível para os novos produtos é bastante limitada.)
+\item[2.] Número de horas de tempo de produção usado em cada fábrica para cada lote produzido de cada novo produto.
+\item[3.] Lucro por lote produzido de cada novo produto. Foi escolhido o lucro por lote produzido como uma medida apropriada após a equipe de PO ter concluído que o incremento de lucro de cada lote adicional produzido ser aproximadamente constante independentemente
+do número total de lotes produzidos. Pelo fato de nenhum custo adicional incorrer para o início da produção e a comercialização de tais produtos, o lucro total de cada um deles é aproximadamente esse lucro por lote vezes o número de lotes produzidos. 
+\end{alineas} 
+
+Obter estimativas razoáveis dessas quantidades exigia conseguir o apoio de pessoal-chave em várias unidades da empresa. O pessoal da divisão de manufatura forneceu os dados da primeira categoria citada anteriormente. Desenvolver estimativas para a segunda catego-
+ria de dados exigia alguma análise por parte dos engenheiros de produção envolvidos no desenvolvimento de processos de produção para os novos produtos. Analisando-se os dados de custos obtidos desses mesmos engenheiros e da divisão de marketing, juntamente com
+uma decisão de preços da divisão de marketing, o departamento de contabilidade desenvolveu estimativas para a terceira categoria.
+
+Os dados coletados foram os seguintes:
+
+\begin{alineascomponto}
+\item A Fábrica 1 leva uma hora para produzir um lote do produto 1 e tem quatro horas de produção disponíveis por semana.
+\item A Fábrica 2 leva duas horas para produzir um lote do produto 2 e tem doze horas de produção disponíveis por semana.
+\item A Fábrica 3 leva três horas para produzir um lote do produto 1, duas horas para produzir um lote do produto dois e tem dezoito horas de produção disponíveis por semana.
+\item O lucro por lote obtido pelo produto 1 é de U\$ 3.000 e o lucro por lote do produto 2 é U\$ 5.000.
+\end{alineascomponto}
+
+A equipe de PO reconheceu imediatamente que se tratava de um problema de programação linear do clássico tipo mix de produtos e então essa equipe empreendeu a formulação do modelo matemático correspondente.
+
+Para formular o modelo matemático (PL) para esse problema, façamos
+\begin{alineas}
+\item[] $x_1 =$ número de lotes do produto 1 produzido semanalmente
+\item[] $x_2 =$ número de lotes do produto 2 produzido semanalmente
+\item[] $Z =$ lucro total por semana (em milhares de dólares) obtido pela produção desses dois produtos
+\end{alineas}
+
+Portanto, $x_1$ e $x_2$ são as variáveis de decisão para o modelo. Usando-se as informações de lucro obtemos:
+
+\begin{alineas}
+\item[] $Z = 3x_1 + 5x_2$
+\end{alineas}
+
+O objetivo é escolher os valores de $x_1$ e $x_2$ de forma a maximizar $Z = 3x_1 + 5x_2$, sujeito às restrições impostas em seus valores por limitações de capacidade de produção disponível nas três fábricas. As informações obtidas indicam que cada lote de produto 1 fabricado por semana usa uma hora de tempo de produção por semana na Fábrica 1, ao passo que estão disponíveis somente quatro horas semanais. Essa restrição é expressa matematicamente pela inequação $x_1 \leq 4$. Similarmente, a Fábrica 2 impõe a restrição $2x_2 \leq 12$. O número de horas de produção usado semanalmente na Fábrica 3 escolhendo-se $x_1$ e $x_2$ como as taxas de produção dos novos produtos seria $3x_1 + 2x_2$. Portanto, a declaração matemática da restrição da Fábrica 3 é $3x_1 + 2x_2 \leq 18$. Finalmente, já que as taxas de produção não podem ser negativas, é necessário restringir as variáveis de decisão para serem não-negativas: $x_1 \geq 0$ e $x_2 \geq 0$.
+
+Em suma, na linguagem matemática da PL, o problema é escolher os valores de $x_1$ e $x_2$ de forma a
+
+\begin{equation*}
+\begin{aligned}
+& \text{maximizar} \\
+& &  Z = 3x_1 + 5x_2 \\
+& \text{sujeito a} \\
+& & x_1 \leq 4 \\
+& & 2x_2 \leq 12 \\
+& & 3x_1 + 2x_2 \leq 18 \\
+& & x_1 \geq 0 \\ 
+& & x_2 \geq 0
+\end{aligned}
+\end{equation*}
+
+Dado um modelo de PL de um determinado problema, utiliza-se \textit{solvers} como o \textit{CPLEX} \cite{ibmcplex} para obter uma solução para o problema. Portanto, a principal dificuldade em trabalhar com PL é produzir um modelo para o problema, visto que uma solução para o mesmo pode ser encontrada em tempo polinomial \cite{luenberger1984linear}.
 
 
-\section{Título de seção }
 
+\subsection{Programação Inteira}	
 
-Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+Na seção anterior foram apresentadas as variáveis de decisão e o seu papel na modelagem dos problemas de PL. Elas podem assumir qualquer valor pertencente ao conjunto dos números reais desde de que esse valor respeite as restrições do modelo. Porém, em muitos problemas do mundo real, as variáveis de decisão só fazem sentido se assumirem valores inteiros. Quando modelamos um problema de PL onde todas as variáveis de decisão tem a restrições de só assumirem valores inteiros, chamamos o modelo gerado de um modelo de \textbf{Programação Inteira (PI)}. Também são encontrados problemas em que só parte das variáveis de decisão necessitam ser inteiras, esses são chamados problemas de \textbf{Programação Inteira Mista (PIM)}. 
 
-\subsection{Título da seção terciária}
+Há casos mais específicos de PI onde as variáveis representam decisões binárias. Por exemplo: $x_i = 1$, se a decisão $i$ for \textit{sim} e $x_i = 0$, se a decisão $i$ for \textit{não}. Modelos de PI que tenham variáveis de decisão binárias são também chamados modelos de \textbf{Programação Inteira Binária (PIB)}.
 
-Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+Considere o Exemplo 2, apresentado na seção anterior. Se for adicionada a restrição de que só serão contabilizados lotes inteiros, teríamos que $x_1$ e $x_2$ só poderiam assumir valores inteiros não negativos. O problema inicialmente proposto como um problema de PL se tornaria um problema de PI.
 
-\subsubsection{Título da seção quaternária}
+Problemas de PI puros (que só possuem variáveis inteiras) com uma região de soluções viáveis limitada têm a garantia de possuírem apenas um número finito de soluções viáveis. Isso pode dar a falsa impressão de que problemas de PI são fáceis de resolver, porém isso não é verdade \cite{hillier2010introduccao}. É provado que resolver um modelo de PI é um problema NP-completo \cite{schrijver1998theory}.
 
-Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+A eliminação das soluções viáveis com valores não-inteiros nas variáveis de decisão de um problema de PL, retira a garantia de que existirá uma solução viável em um vértice da região de soluções viáveis, que é ótima para o problema como um todo. Essa garantia é o segredo da eficiência do método \textit{Simplex} \cite{schrijver1998theory} para resolver problemas de PL. Dessa forma, problemas de PL são geralmente mais fáceis de resolver que problemas de PI \cite{hillier2010introduccao}.
+
+\subsection{\textit{Educational Timetabling}}
+
+\textbf{\textit{Educational Timetabling}} trata de problemas de alocação envolvendo universidades e escolas de ensino médio. \citeonline{kingston2013educational} divide esse problema em três classes de problemas, são eles: \textit{school timetabling}, \textit{course timetabling} e \textit{examination timetabling}. \textit{School timetabling} se refere a problemas de alocação em escolas de ensino médio, os outros dois, \textit{course timetabling} e \textit{examination timetabling}, tratam de problemas de alocação de horários de disciplinas e provas em universidades. Mais adiante será dada um explicação mais precisa sobre cada uma dessas classes de problemas.
+
+\subsubsection{\textit{School Timetabling}}
+
+No problema de \textbf{\textit{school timetabling}}, a alocação dada para ciclos semanais ou quinzenais. Os horários são particionados em períodos de mesmo tamanho. O problema também tem a característica de que os estudantes estão agrupados em classes \cite{kingston2004tiling}. A forma tradicional do problema segue o seguinte padrão:
+
+Dado $m$ classes $c_1, ..., c_m$, $n$ professores $t_1, ..., t_n$, e $p$ períodos $1, ..., p$. Também é dado uma matriz de inteiros não negativos $R_{mxn}$ chamada de matriz de requisitos, onde $r_{ij}$ é o número de aulas ministradas pelo professor $t_j$ à classe $c_i$.
+O problema consiste na atribuição de aulas a períodos de tal forma que nenhum professor ou classe se envolva em mais de uma aula ao mesmo tempo \cite{vslechta2004decomposition}. 
+
+\subsubsection{\textit{Course Timetabling}}
+
+\textbf{\textit{Course timetabling}} é um problema de alocação voltado para as universidades. Nesse problema, um conjunto de disciplinas devem ser associadas a uma grade de horários e a um conjunto salas de aula. Além disso, determinadas restrições devem ser respeitadas: um professor não pode estar associado a mais de uma disciplina em um mesmo período; uma sala de aula não pode receber dois cursos ao mesmo tempo; disciplinas de um mesmo curso não podem compartilhar um período, etc. Se for impossível satisfazer todas as restrições, o número de restrições violadas deve ser minimizado \cite{lach2012curriculum}.
+
+Para \citeonline{schaerf1999survey}, \textit{\textbf{course timetabling}} envolve a alocação semanal de aulas de uma universidade, de forma que minimize os choques de horários entre cursos que tenham alunos em comum.
+
+Diferente de \textit{school timetabling}, \textit{course timetabling} não agrupa os alunos em classes. O problema nessa forma leva em conta as escolhas individuais dos alunos quanto as disciplinas a serem cursadas \cite{kingston2004tiling}.
+
+Este trabalho trata de um problema de \textit{course timetabling}, mas são levadas em conta problemas encontrados no processo de alocação da UFC-Quixadá. Por esse motivo, o problema abordado aqui tem algumas diferenças do problema em sua forma tradicional. Um exemplo é a alocação em salas de aulas, que não é levado em conta nesse trabalho. É considerado aqui apenas a alocação de professores em disciplinas, e disciplinas em horários. 
+
+\subsubsection{\textit{Examination Timetabling}}
+
+\textbf{\textit{Examination timetabling}} é definido como sendo a atribuição de um conjunto de exames (ou provas) a um número limitado de horários sujeito a um conjunto de restrições \cite{yang2004novel}. Essa a alocação deve evitar choque de horários entre exames de cursos que tenham alunos em comum \cite{schaerf1999survey}.
+
+Assim como \textit{course timetabling}, esse é um problema encontrado nas universidades. A característica principal que difere ambos, é a restrição quanto aos choques de horários entre disciplinas ou exames que tenham alunos em comum. \textit{course timetabling} tenta minimizar esses choques de horários, enquanto que \textit{examination timetabling} deve evita-los de qualquer forma.
