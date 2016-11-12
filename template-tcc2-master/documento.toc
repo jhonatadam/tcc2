@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {3.0.2}Programa\IeC {\c c}\IeC {\~a}o Inteira}{22}{subsection.3.0.2}
 \contentsline {subsection}{\numberline {3.0.3}\textit {Educational Timetabling}}{23}{subsection.3.0.3}
 \contentsline {subsubsection}{\numberline {3.0.3.1}\textit {School Timetabling}}{23}{subsubsection.3.0.3.1}
-\contentsline {subsubsection}{\numberline {3.0.3.2}\textit {Course Timetabling}}{24}{subsubsection.3.0.3.2}
+\contentsline {subsubsection}{\numberline {3.0.3.2}\textit {Course Timetabling}}{23}{subsubsection.3.0.3.2}
 \contentsline {subsubsection}{\numberline {3.0.3.3}\textit {Examination Timetabling}}{24}{subsubsection.3.0.3.3}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \contentsline {chapter}{\uppercase {REFER\^ENCIAS}}{25}{section*.11}

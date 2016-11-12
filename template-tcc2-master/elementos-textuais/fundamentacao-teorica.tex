@@ -138,14 +138,11 @@ Problemas de PI puros (que só possuem variáveis inteiras) com uma região de s
 
 \subsection{\textit{Educational Timetabling}}
 
-\textbf{\textit{Educational Timetabling}} trata de problemas de alocação envolvendo universidades e escolas de ensino médio. \citeonline{kingston2013educational} divide esse problema em três classes de problemas, são eles: \textit{school timetabling}, \textit{course timetabling} e \textit{examination timetabling}. \textit{School timetabling} se refere a problemas de alocação em escolas de ensino médio, os outros dois, \textit{course timetabling} e \textit{examination timetabling}, tratam de problemas de alocação de horários de disciplinas e provas em universidades. Mais adiante será dada um explicação mais precisa sobre cada uma dessas classes de problemas.
+\textbf{\textit{Educational Timetabling}} trata de problemas de alocação envolvendo universidades e escolas de ensino médio. \citeonline{kingston2013educational} divide esses problemas em três classes de problemas, são eles: \textit{school timetabling}, \textit{course timetabling} e \textit{examination timetabling}. \textit{School timetabling} se refere a problemas de alocação em escolas de ensino médio. Os outros dois, \textit{course timetabling} e \textit{examination timetabling}, tratam de problemas de alocação de horários de disciplinas e provas em universidades. Adiante será dada um explicação mais precisa sobre cada uma dessas classes de problemas.
 
 \subsubsection{\textit{School Timetabling}}
 
-No problema de \textbf{\textit{school timetabling}}, a alocação dada para ciclos semanais ou quinzenais. Os horários são particionados em períodos de mesmo tamanho. O problema também tem a característica de que os estudantes estão agrupados em classes \cite{kingston2004tiling}. A forma tradicional do problema segue o seguinte padrão:
-
-Dado $m$ classes $c_1, ..., c_m$, $n$ professores $t_1, ..., t_n$, e $p$ períodos $1, ..., p$. Também é dado uma matriz de inteiros não negativos $R_{mxn}$ chamada de matriz de requisitos, onde $r_{ij}$ é o número de aulas ministradas pelo professor $t_j$ à classe $c_i$.
-O problema consiste na atribuição de aulas a períodos de tal forma que nenhum professor ou classe se envolva em mais de uma aula ao mesmo tempo \cite{vslechta2004decomposition}. 
+No problema de \textbf{\textit{school timetabling}}, a alocação é dada para ciclos semanais ou quinzenais. Os horários são particionados em períodos de mesmo tamanho. O problema também tem a característica de que os estudantes estão agrupados em classes \cite{kingston2004tiling}. A forma tradicional do problema consiste na atribuição de aulas a períodos de tal forma que nenhum professor ou classe se envolva em mais de uma aula ao mesmo tempo \cite{vslechta2004decomposition}. 
 
 \subsubsection{\textit{Course Timetabling}}
 
@@ -155,10 +152,10 @@ Para \citeonline{schaerf1999survey}, \textit{\textbf{course timetabling}} envolv
 
 Diferente de \textit{school timetabling}, \textit{course timetabling} não agrupa os alunos em classes. O problema nessa forma leva em conta as escolhas individuais dos alunos quanto as disciplinas a serem cursadas \cite{kingston2004tiling}.
 
-Este trabalho trata de um problema de \textit{course timetabling}, mas são levadas em conta problemas encontrados no processo de alocação da UFC-Quixadá. Por esse motivo, o problema abordado aqui tem algumas diferenças do problema em sua forma tradicional. Um exemplo é a alocação em salas de aulas, que não é levado em conta nesse trabalho. É considerado aqui apenas a alocação de professores em disciplinas, e disciplinas em horários. 
+Este trabalho trata de um problema similar aos de \textit{course timetabling}, onde são levadas em conta problemas encontrados no processo de alocação da UFC-Quixadá. Por esse motivo, o problema abordado aqui tem algumas diferenças com relação aos de \textit{course timetabling}. Um exemplo é a alocação em salas de aulas, que não é levada em conta neste trabalho. São consideradas aqui apenas as alocações de professores em disciplinas, e de disciplinas em horários. 
 
 \subsubsection{\textit{Examination Timetabling}}
 
 \textbf{\textit{Examination timetabling}} é definido como sendo a atribuição de um conjunto de exames (ou provas) a um número limitado de horários sujeito a um conjunto de restrições \cite{yang2004novel}. Essa a alocação deve evitar choque de horários entre exames de cursos que tenham alunos em comum \cite{schaerf1999survey}.
 
-Assim como \textit{course timetabling}, esse é um problema encontrado nas universidades. A característica principal que difere ambos, é a restrição quanto aos choques de horários entre disciplinas ou exames que tenham alunos em comum. \textit{course timetabling} tenta minimizar esses choques de horários, enquanto que \textit{examination timetabling} deve evita-los de qualquer forma.
+Assim como \textit{course timetabling}, esse é um problema encontrado nas universidades. A característica principal que difere ambos, é a restrição quanto aos choques de horários entre disciplinas ou exames que tenham alunos em comum. \textit{course timetabling} tenta minimizar esses choques de horários, enquanto que \textit{examination timetabling} deve proibi-los.
