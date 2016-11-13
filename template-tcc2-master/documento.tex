@@ -138,6 +138,10 @@
 
 \begin{document}
     
+    % referencia com parênteses as equações
+	\let\oldref\ref
+	\renewcommand{\ref}[1]{(\oldref{#1})}   
+    
     \captionsetup[figure]{slc=off}
 
     %% CORREÇÃO DE TÍTULOS
@@ -179,8 +183,9 @@
 	\textual
 	%Sugestão de capítulos e ordem entre eles, sinta-se a vontade para alterar
 	\input{elementos-textuais/introducao}
-	\input{elementos-textuais/trabalhos-relacionados}
+	%\input{elementos-textuais/trabalhos-relacionados}
 	\input{elementos-textuais/fundamentacao-teorica}
+	\input{elementos-textuais/modelo-para-o-papd}
 	%\input{elementos-textuais/metodologia}
 	%\input{elementos-textuais/resultados}
 	%\input{elementos-textuais/discussao}
