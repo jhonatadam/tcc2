@@ -10,6 +10,12 @@
 {BERTSIMAS, D.; TSITSIKLIS, J.~N. \textbf{Introduction to linear optimization}.
   [S.l.]: Athena Scientific Belmont, MA, 1997. v.~6.}
 
+\bibitem[Dod{\'o} 2011]{naadriano}
+\abntrefinfo{Dod{\'o}}{DOD{\'O}}{2011}
+{DOD{\'O}, A.~A. \textbf{Aplica{\c{c}}{\~a}o da Teoria dos Jogos na
+  Resolu{\c{c}}{\~a}o do Problema de Aloca{\c{c}}{\~a}o de Professores em
+  Disciplinas}. [S.l.: s.n.], 2011.}
+
 \bibitem[Hillier e Lieberman 2010]{hillier2010introduccao}
 \abntrefinfo{Hillier e Lieberman}{HILLIER; LIEBERMAN}{2010}
 {HILLIER, F.~S.; LIEBERMAN, G.~J. \textbf{Introdu{\c{c}}{\~a}o {\`a} pesquisa
@@ -21,6 +27,12 @@
 Dispon{\'\i}vel em:
   \url{http://www-03.ibm.com/software/products/pt/ibmilogcpleoptistud}. Acesso
   em: 19 Maio 2016.}
+
+\bibitem[ITC 2016]{itc}
+\abntrefinfo{ITC}{ITC}{2016}
+{ITC. \textbf{International Timetabling Competition}. 2016.
+Dispon{\'\i}vel em: \url{http://www.cs.qub.ac.uk/itc2007/}. Acesso em: 26 Maio
+  2016.}
 
 \bibitem[Kingston 2004]{kingston2004tiling}
 \abntrefinfo{Kingston}{KINGSTON}{2004}
