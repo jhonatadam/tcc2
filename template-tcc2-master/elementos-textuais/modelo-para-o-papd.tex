@@ -213,32 +213,38 @@ A Restrição \ref{r22} fixa os eventuais horários predeterminados de uma disci
 y_{is} = 1, \forall{s \in{H_i}}, \forall{i \in{D}} &&
 \end{eqnarray}
 
+A Restrição \ref{r23} define os grupos de \textit{slots} aos quais as disciplinas devem ser alocadas. Essa Restrição tem a função de reduzir os espaço de busca eliminando a simetria nas possibilidades de alocação das disciplinas. É importante notar que para que ela funcione adequadamente não deve haver intersecção entre os grupos de \textit{slots} de mesmo tamanho.
+\begin{eqnarray}
+\label{r23}
+y_{is_1} = y_{is_2}, \forall{s_1, s_2}, \forall{g\in{G_{(crd_i/2)}}}, \forall{i\in{D}} &&
+\end{eqnarray}
+
 As demais restrições são de integridade.
 \begin{eqnarray}
-\label{r25}
+\label{r24}
 a_{ij}\in{\mathbb{N}} &&\\
-\label{r26}
+\label{r25}
 b_{pi} \in{\mathbb{R}} &&\\
-\label{r27}
+\label{r26}
 max_{p} \in{\mathbb{N}} &&\\
-\label{r28}
+\label{r27}
 min_{p} \in{\mathbb{N}} &&\\
-\label{r29}
+\label{r28}
 crd_{i} \in{\mathbb{N}} &&\\
-\label{r30}
+\label{r29}
 n_{i} \in{\mathbb{N}} &&\\
-\label{r31}
+\label{r30}
 x_{ij}\in{\{0,1\}} &&\\
-\label{r32}
+\label{r31}
 y_{is}\in{\{0,1\}} &&\\
-\label{r33}
+\label{r32}
 z_{pi}\in{\{0,1\}} &&\\
-\label{r34}
+\label{r33}
 w_{ps}\in{\{0,1\}} && \\
-\label{r35}
+\label{r34}
 u_{kc}\in{\{0,1\}} && \\
-\label{r36}
+\label{r35}
 v_{p}\in{\{0,1\}} && \\
-\label{r37}
+\label{r36}
 f_{ig}\in{\{0,1\}} &&
 \end{eqnarray}

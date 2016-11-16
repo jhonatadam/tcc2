@@ -20,24 +20,24 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Modelo para o PAPD}}{23}{chapter.3}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {REFER\^ENCIAS}}{30}{section*.12}
+\contentsline {chapter}{\uppercase {REFER\^ENCIAS}}{31}{section*.12}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\normalfont \bfseries {LOREM IPSUM}}{31}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\normalfont \bfseries {LOREM IPSUM}}{32}{appendix.A}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\normalfont \bfseries {MODELO DE CAPA}}{32}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}\normalfont \bfseries {MODELO DE CAPA}}{33}{appendix.B}
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \renewcommand *{\cftappendixname }{\normalfont \bfseries ANEXO \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\normalfont \bfseries {EXEMPLO DE ANEXO}}{33}{appendix.anexochapback.1}
+\contentsline {appendix}{\chapternumberline {A}\normalfont \bfseries {EXEMPLO DE ANEXO}}{34}{appendix.anexochapback.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\normalfont \bfseries {DIN\IeC {\^A}MICA DAS CLASSES SOCIAIS}}{34}{appendix.anexochapback.2}
+\contentsline {appendix}{\chapternumberline {B}\normalfont \bfseries {DIN\IeC {\^A}MICA DAS CLASSES SOCIAIS}}{35}{appendix.anexochapback.2}

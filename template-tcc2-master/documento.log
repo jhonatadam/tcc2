@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  14 NOV 2016 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.4)  16 NOV 2016 08:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1789,22 +1789,22 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 56.
  [25] [26] [27]
-[28]) (./documento.bbl [29]
+[28] [29]) (./documento.bbl [30]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-) (./elementos-pos-textuais/apendices/historico-de-mudancas.tex [30
+) (./elementos-pos-textuais/apendices/historico-de-mudancas.tex [31
 
 ])
-(./elementos-pos-textuais/apendices/lorem-ipsum.tex [31
+(./elementos-pos-textuais/apendices/lorem-ipsum.tex [32
 
 ])
-(./elementos-pos-textuais/anexos/exemplo-de-anexo.tex [32
+(./elementos-pos-textuais/anexos/exemplo-de-anexo.tex [33
 
 ])
-(./elementos-pos-textuais/anexos/dinamica-das-classes-sociais.tex [33
+(./elementos-pos-textuais/anexos/dinamica-das-classes-sociais.tex [34
 
 ])
 
@@ -1812,7 +1812,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[34
+[35
 
 ]
 \tf@lof=\write8
@@ -1839,10 +1839,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 25269 strings out of 493029
- 385204 string characters out of 6136234
- 733032 words of memory out of 5000000
- 27985 multiletter control sequences out of 15000+600000
+ 25272 strings out of 493029
+ 385231 string characters out of 6136234
+ 733109 words of memory out of 5000000
+ 27986 multiletter control sequences out of 15000+600000
  73313 words of font info for 253 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,92p,2035b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1857,10 +1857,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (36 pages, 408100 bytes).
+Output written on documento.pdf (37 pages, 409107 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
- 411 compressed objects within 5 object streams
- 104 named destinations out of 1000 (max. 500000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 419 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
  31431 words of extra memory for PDF output out of 35830 (max. 10000000)
 
