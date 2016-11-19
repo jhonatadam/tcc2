@@ -1,7 +1,7 @@
 \chapter{Modelo para o PAPD}
 \label{cap:modelo-para-o-papd}
 
-A construção de um modelo de PI para o problema de alocação de professores da UFC-Quixadá demanda o conhecimento de algumas informações relevantes no domínio do problema. Dessa forma, foi feito um levantamento de como é realizada atualmente a alocação na UFC-Quixadá, e chegamos a informações que são importantes para a alocação dos professores e das disciplinas. 
+A construção de um modelo de PI para o problema de alocação de professores da UFC-Quixadá demanda o conhecimento de algumas informações relevantes no domínio do problema. Dessa forma, foi feito um levantamento de como é realizada atualmente a alocação na UFC-Quixadá, e chegamos as informações que são importantes para a alocação dos professores e das disciplinas. 
 
 A alocação é feita sobre uma grade de horários semanal. Cada elemento dessa grade representa um horário disponível para alocação ao qual chamamos de \textbf{\textit{slot}}. Um \textit{slot} tem o valor de dois créditos (2 horas), ou seja, uma disciplinas de quatro créditos demanda dois \textit{slots} para ser alocada. Um único dia agrupa seis \textit{slots}, aos quais estão divididos nos três turnos de um dia (manhã, tarde e noite). Um turno de um dia agrupa dois \textit{slots}, o \textit{slot} AB e o \textit{slot} CD do turno. 
 
@@ -19,7 +19,7 @@ Neste trabalho, mapeamos os \textit{slots} para valores inteiros, dessa forma os
 \end{figure}
 
 
-Para os professores, há uma carga horária máxima e mínima para cumprir. Essa carga horária é diferente para cada professor, já que alguns professores realizam atividades como coordenação de curso e etc. O número de disciplinas que um professor deve ser associado depende então do número de créditos das disciplinas. 
+Para os professores, há uma carga horária máxima e mínima para cumprir. Essa carga horária pode ser diferente para cada professor, já que alguns professores realizam atividades como coordenação de curso e etc. O número de disciplinas que um professor deve ser associado depende então do número de créditos das disciplinas. 
 
 Há também restrições que definem os horários e os dias aos quais os professores não devem ser alocados:
 
@@ -32,9 +32,9 @@ Há também restrições que definem os horários e os dias aos quais os profess
 \item professores não devem ser alocados a nenhum disciplina nos horários das reuniões que participam.
 \end{alineascomponto}
 
-A UFC-Quixadá conta atualmente com seis cursos de graduação. Todo semestre os cursos ofertam um conjunto de disciplinas, de forma que as disciplinas a serem alocadas num semestre são as ofertadas por um curso. As disciplinas estão agrupadas nesses cursos de forma que algumas delas são compartilhadas entre cursos e outras não. Embora essas disciplinas sejam compartilhadas, as oferta dela é específica de um curso. 
+A UFC-Quixadá conta atualmente com seis cursos de graduação. Todo semestre os cursos ofertam um conjunto de disciplinas, de forma que as disciplinas a serem alocadas num semestre são as ofertadas por um curso. As disciplinas estão agrupadas nesses cursos de forma que algumas delas são compartilhadas entre cursos e outras não. Embora essas disciplinas sejam compartilhadas, cada oferta é específica de um curso. 
 
-A maioria dos cursos são de horário integral \footnote{Utilizam os turnos da manhã e da tarde para alocar suas disciplinas.}, porém cada curso opta por um horário preferencial, onde as disciplinas obrigatórias são alocadas. Em alguns casos, a soma de créditos das disciplinas obrigatórias de um semestre de um cursos excede a quantidade de créditos de um turno (10 créditos). Para resolver isso os cursos optam por alocar os créditos excedentes em outro turno, já que não é desejável que disciplinas obrigatórias de um mesmo semestre choquem horário. Para representar isso em nosso modelo definimos um horário primário e um horário secundário parar cada curso. O horário primário é onde são alocadas as disciplinas obrigatórias, e o secundário é onde são alocadas as disciplinas obrigatórias excedentes. 
+A maioria dos cursos são de horário integral \footnote{Utilizam os turnos da manhã e da tarde para alocar suas disciplinas.}, porém cada curso opta por um horário preferencial, onde a maioria das disciplinas obrigatórias são alocadas. Em alguns casos, a soma de créditos das disciplinas obrigatórias de um semestre de um cursos excede a quantidade de créditos de um turno (10 créditos). Para resolver isso os cursos optam por alocar os créditos excedentes em outro turno, já que é imprescindível que disciplinas obrigatórias de um mesmo semestre não choquem horário. Para representar isso em nosso modelo definimos um horário primário e um horário secundário parar cada curso. O horário primário é onde são alocadas as disciplinas obrigatórias, e o secundário é onde são alocadas as disciplinas obrigatórias excedentes. As disciplinas optativas são livres para serem alocadas em qualquer horário.
 
 Assim como os professores, as disciplinas tem seu conjunto de restrições:
 
@@ -43,12 +43,13 @@ Assim como os professores, as disciplinas tem seu conjunto de restrições:
 \item disciplinas associadas a um professor não compartilham \textit{slots};
 \item disciplinas obrigatórias de um mesmo semestre de um mesmo curso não devem compartilhar \textit{slots};
 \item número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos;
-\item uma disciplina deve compartilhar \textit{slots} com sues pré-requisitos.
+\item uma disciplina pode ter seus horários prefixados;
+\item uma disciplina deve compartilhar \textit{slots} com seus pré-requisitos.
 \end{alineascomponto} 
 
-Um modelo de PI então foi construído a partir das restrições do problema. O modelo representa as entidades a serem alocadas da seguinte forma: Variáveis binárias representam a associação professores/disciplinas e disciplinas/horários (ou slots, como chamaremos neste trabalho). Por exemplo: o valor de uma variável z pi é 1 se o professor p está associado à disciplina i, e 0 caso contrário. Dessa forma, estão sendo mapeados professores, disciplinas e slots para variáveis binárias. Essas compõem as equações e inequações lineares das restrições do modelo.
+Um modelo de PI então foi construído a partir das restrições do problema. O modelo representa as entidades a serem alocadas da seguinte forma: variáveis binárias representam a associação professores/disciplinas e disciplinas/horários (ou \textit{slots}, como chamaremos neste trabalho). Por exemplo: o valor de uma variável $z_{pi}$ é 1 se o professor $p$ está associado à disciplina $i$, e 0 caso contrário. Dessa forma, estão sendo mapeados professores, disciplinas e \textit{slots} para variáveis binárias. Essas compõem as equações e inequações lineares das restrições do modelo.
 
-Definimos que a sobreposição de horários entre duas disciplinas ocorre quando elas compartilham pelo menos um \textit{slot}.
+Definimos que há choque de horários entre duas disciplinas quando elas compartilham pelo menos um \textit{slot}.
 
 A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos estão representados em letras maiúsculas e as variáveis em minúsculas. Em seguida, serão apresentadas as restrições e a função objetivo.
 
@@ -82,11 +83,10 @@ A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos
 	\item $w_{ps}$ - 1 se o professor $p$ está associado ao \textit{slot} $s$, 0 caso contrário;
 	\item $z_{pi}$ - 1 se o professor $p$ está associado a disciplina $i$, 0 caso contrário;
 	\item $u_{kc}$ - 1 se todas as disciplinas obrigatórias do semestre $k$ do curso $c$ estão alocadas no turno primário do próprio curso;
-	\item $v_p$ - 1 se o professor $p$ não dá aulas nas sextas, 0 se não dá aulas na segunda; 
-	\item $f_{ig}$ - 1 se a disciplina $i$ está associada ao grupo de \textit{slots} $t$, 0 caso contrário;
+	\item $v_p$ - 1 se o professor $p$ não dá aula na sexta-feira, 0 se não dá aula na segunda-feira.
 \end{itemize} 
 
-A função objetivo define qual alocação é melhor. Para isso ela leva em conta a preferência geral dos professores e as sobreposições de horários das disciplinas. A somatória $\sum a_{ij} * x_{ij}$ representa na função objetivo a soma dos alunos que podem se matricular em disciplinas que compartilham \textit{slots}. A somatória $\sum b_{pi} * z_{pi}$ representa a soma das preferências dos professores. É importante notar que a preferência de um professor por uma disciplinas só é contabilizada se ele estiver associado a essa disciplinas
+A função objetivo define qual alocação é melhor. Para isso ela leva em conta a preferência geral dos professores e os choques de horários das disciplinas. A somatória $\sum a_{ij} * x_{ij}$ representa na função objetivo a soma dos alunos que podem se matricular em disciplinas que compartilham \textit{slots}. A somatória $\sum b_{pi} * z_{pi}$ representa a soma das preferências dos professores. É importante notar que a preferência de um professor por uma disciplinas só é contabilizada se ele estiver associado a essa disciplinas
 
 É utilizado na função objetivo um valor $\alpha\in[0,1]$. Esse valor balanceia os pesos dos dois lados da função objetivo. Por exemplo, quando $\alpha = 0$, é considerado na função objetivo apenas a preferência dos professores e ignorado o número de alunos que podem fazer pares de disciplinas que compartilham \textit{slots}. Por outro lado, se $\alpha = 1$, é considerado apenas o número de alunos nos choques de horários. Assim, para $\alpha = 0.5$, é dado peso igual para ambos.
 
@@ -103,7 +103,7 @@ As Restrições \ref{r1} e \ref{r2} definem, respectivamente, a carga horária m
 \sum_{i\in{D}}^{}{crd_i * z_{pi}} \ge min_p, \forall{p}\in{P} &&
 \end{eqnarray}
 
-A Restrição \ref{r3} impede que professores estejam alocados nos três turnos de um mesmo dia.
+A Restrição \ref{r3} impede que professores estejam alocados nos três turnos de um mesmo dia. Apresentaremos essa restrição em sua forma não linear para facilitar o entendimento do modelo, embora seja possível torná-la linear.
 \begin{eqnarray}
 \label{r3}
 \sum_{q\in\{{0,2,4}\}}^{}{max(w_{p(s+q)}, w_{p(s+q+1)})}  \leq 2, \forall{s}\in{\{1,7,13,19,25\}}, \forall{p}\in{P}  &&
@@ -165,13 +165,13 @@ A Restrição \ref{r13} impede que disciplinas obrigatórias de um mesmo semestr
 x_{ij} = 0, \forall{i,j}\in{D_{kc}^{ob}}, \forall{k}\in{K_c}, \forall{c}\in{C} &&
 \end{eqnarray}
 
-A Restrição \ref{r14} diz que se duas disciplinas partilham pelo menos um \textit{slot}, então elas sofrem sobreposição de horários.
+A Restrição \ref{r14} diz que se duas disciplinas partilham pelo menos um \textit{slot}, então elas têm choque de horários.
 \begin{eqnarray}
 \label{r14}
 y_{is} + y_{js} \leq x_{ij} + 1, \forall{s}\in{S}, \forall{i, j}\in{D} &&
 \end{eqnarray}
 
-As Restrições \ref{r15}, \ref{r16} e \ref{r17} referem-se as disciplinas obrigatórias, elas dizem que se as cargas horárias das disciplinas obrigatórias de um semestre de um curso são superiores a carga horária do turno primário desse curso, então essas disciplinas devem ser alocadas no horário primário e secundário do curso, de forma que o turno primário esteja completamente preenchido, caso contrário, todas as disciplinas devem ser alocadas no horário primário do curso\footnote{Note que na Restrição \ref{r16}, quando $u_{ck} = 1$, temos que $(1 - u_{kc}) * 10 = 10$, o que garante que o turno primário do curso $c$ esteja preenchido por disciplinas obrigatórias do semestre $k$ do mesmo curso. Já na Restrição \ref{r17}, quando $u_{ck} = 1$, $(1 - u_{kc}) * (-20+\sum_{i \in{D_{kc}^{ob}}}^{}{crd_i})$ é igual ao número de créditos excedentes, o que garante que o excedente de créditos do semestre seja alocado no turno secundário do curso.}.
+As Restrições \ref{r15}, \ref{r16} e \ref{r17} referem-se as disciplinas obrigatórias, elas dizem que se as cargas horárias das disciplinas obrigatórias de um semestre de um curso são superiores a carga horária do turno primário desse curso, então essas disciplinas devem ser alocadas no horário primário e secundário do curso, de forma que o turno primário esteja completamente preenchido, caso contrário, todas as disciplinas devem ser alocadas no horário primário do curso\footnote{Note que na Restrição \ref{r16}, quando $u_{ck} = 0$, temos que $(1 - u_{kc}) * 10 = 10$, o que garante que o turno primário do curso $c$ esteja preenchido por disciplinas obrigatórias do semestre $k$ do mesmo curso. Já na Restrição \ref{r17}, quando $u_{ck} = 0$, $(1 - u_{kc}) * (-20+\sum_{i \in{D_{kc}^{ob}}}^{}{crd_i})$ é igual ao número de créditos excedentes, o que garante que o excedente de créditos do semestre seja alocado no turno secundário do curso.}.
  
 \begin{eqnarray}
 \label{r15}
@@ -194,7 +194,7 @@ A Restrição \ref{r19} fixa o número de \textit{slots} de um professor em prop
 2 * \sum_{s \in S}^{}{w_{ps}} = \sum_{i \in D}^{}{crd_i * z_{pi}}, \forall{p}\in{P} &&
 \end{eqnarray}
 
-A Restrição \ref{r20} diz que se um professor está associado a uma disciplina, ele também está associado aos \textit{slots} dessa disciplina\footnote{Nos caos em que $w_{ps} = 1$, temos $y_{is} = 1$ e $z_{pi} = 1$, ou $y_{is} = 1$ e $z_{pi} = 0$. O primeiro caso ocorre quando temos a associação disciplinas/\textit{slot}, professor/disciplinas e professor/\textit{slot}. O segundo caso ocorre quando temos que o professor está associado ao \textit{slot} $s$, mas por outra disciplinas.
+A Restrição \ref{r20} diz que se um professor está associado a uma disciplina, ele também está associado aos \textit{slots} dessa disciplina\footnote{Nos casos em que $w_{ps} = 1$, temos $y_{is} = 1$ e $z_{pi} = 1$, ou $y_{is} = 1$ e $z_{pi} = 0$. O primeiro caso ocorre quando temos a associação disciplinas/\textit{slot}, professor/disciplinas e professor/\textit{slot}. O segundo caso ocorre quando temos que o professor está associado ao \textit{slot} $s$, mas por outra disciplina.
 A garantia que apenas esses dois casos ocorrem é dada pelas Restrições \ref{r18} e \ref{r19}.}. 
 \begin{eqnarray}
 \label{r20}

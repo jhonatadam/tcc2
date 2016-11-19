@@ -11,12 +11,12 @@
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdu\IeC {\c c}\IeC {\~a}o}}{14}{chapter.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Fundamenta\IeC {\c c}\IeC {\~a}o Te\IeC {\'o}rica}}{16}{chapter.2}
-\contentsline {subsection}{\numberline {2.0.1}Programa\IeC {\c c}\IeC {\~a}o Linear}{16}{subsection.2.0.1}
-\contentsline {subsection}{\numberline {2.0.2}Programa\IeC {\c c}\IeC {\~a}o Inteira}{20}{subsection.2.0.2}
-\contentsline {subsection}{\numberline {2.0.3}\textit {Educational Timetabling}}{21}{subsection.2.0.3}
-\contentsline {subsubsection}{\numberline {2.0.3.1}\textit {School Timetabling}}{21}{subsubsection.2.0.3.1}
-\contentsline {subsubsection}{\numberline {2.0.3.2}\textit {Course Timetabling}}{21}{subsubsection.2.0.3.2}
-\contentsline {subsubsection}{\numberline {2.0.3.3}\textit {Examination Timetabling}}{22}{subsubsection.2.0.3.3}
+\contentsline {section}{\numberline {2.1}Programa\IeC {\c c}\IeC {\~a}o Linear}{16}{section.2.1}
+\contentsline {section}{\numberline {2.2}Programa\IeC {\c c}\IeC {\~a}o Inteira}{20}{section.2.2}
+\contentsline {section}{\numberline {2.3}\textit {Educational Timetabling}}{21}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}\textit {School Timetabling}}{21}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}\textit {Course Timetabling}}{21}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}\textit {Examination Timetabling}}{22}{subsection.2.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Modelo para o PAPD}}{23}{chapter.3}
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}

@@ -3,7 +3,7 @@
 
 Esse capítulo apresenta os conceitos fundamentais para a compreensão deste trabalho. A Seção 4.1 apresenta os conceitos de Programação Linear. A Seção 4.2 descreve Programação Inteira, evidenciando o que difere um modelo de Programação Inteira de um modelo de Programação Linear. A Seção 4.3 apresenta uma visão geral dos problemas de \textit{Educational Timetabling}. Para detalhes além dos apresentados a seguir, indicamos: \citeonline{schrijver1998theory},  \citeonline{bertsimas1997introduction} e \citeonline{hillier2010introduccao}.
 
-\subsection{Programação Linear}
+\section{Programação Linear}
 
 Um modelo de \textbf{Programação Linear (PL)} é constituído por um conjunto de variáveis. Essas variáveis compõem uma função linear objetivo, além de um conjunto de equações e inequações lineares que representam as restrições do modelo. Solucionar um problema de PL é encontrar um valor para cada uma das variáveis que respeite todas as restrições e minimize o custo da função objetivo \cite{bertsimas1997introduction}. 
 
@@ -75,11 +75,11 @@ Como ilustração, considere o seguinte exemplo de \citeonline{hillier2010introd
 A empresa decidiu que produtos não rentáveis estão sendo descontinuados, liberando capacidade produtiva para o lançamento de dois novos produtos com grande potencial de vendas:
 
 \begin{alineas} 
-\item[] \textbf{Produto 1}: Uma porta de vidro de 2,5 m com esquadria de alumínio
-\item[] \textbf{Produto 2}: Uma janela duplamente adornada com esquadrias de madeira de $1,20 \times 1,80 m$ 
+\item[] \textbf{Produto 1}: Uma porta de vidro de 2,5 m com esquadria de alumínio;
+\item[] \textbf{Produto 2}: Uma janela duplamente adornada com esquadrias de madeira de $1,20 \times 1,80 m$.
 \end{alineas} 
 
-O produto 1 requer parte da capacidade produtiva das Fábricas 1 e 3, mas nenhuma da Fábrica 2. O produto 2 precisa apenas das Fábricas 2 e 3. A empresa poderia vender tanto quanto fosse possível produzir desses produtos por essas fábricas. Entretanto, pelo fato de ambos os produtos poderem estar competindo pela mesma capacidade produtiva na Fábrica 3, não está claro qual mix dos dois produtos seria o mais lucrativo. O problema então é definido da seguinte forma: 
+O Produto 1 requer parte da capacidade produtiva das Fábricas 1 e 3, mas nenhuma da Fábrica 2. O Produto 2 precisa apenas das Fábricas 2 e 3. A empresa poderia vender tanto quanto fosse possível produzir desses produtos por essas fábricas. Entretanto, pelo fato de ambos os produtos poderem estar competindo pela mesma capacidade produtiva na Fábrica 3, não está claro qual mix dos dois produtos seria o mais lucrativo. O problema então é definido da seguinte forma: 
 
 Determinar quais devem ser as taxas de produção para ambos os produtos de modo a maximizar o lucro total, sujeito às restrições impostas pelas capacidades produtivas limitadas disponíveis nas três fábricas. (Cada produto será fabricado em lotes de 20, de forma que a taxa de produção é definida como o número de lotes produzidos por semana.) É permitida qualquer combinação de taxas de produção que satisfaça essas restrições, inclusive não produzir nada de um produto e o máximo possível do outro. 
 
@@ -124,9 +124,7 @@ Em suma, na linguagem matemática da PL, o problema é escolher os valores de $x
 
 Dado um modelo de PL de um determinado problema, utiliza-se \textit{solvers} como o \textit{CPLEX} \cite{ibmcplex} para obter uma solução para o problema. Portanto, a principal dificuldade em trabalhar com PL é produzir um modelo para o problema, visto que uma solução para o mesmo pode ser encontrada em tempo polinomial \cite{luenberger1984linear}.
 
-
-
-\subsection{Programação Inteira}	
+\section{Programação Inteira}	
 
 Na seção anterior foram apresentadas as variáveis de decisão e o seu papel na modelagem dos problemas de PL. Elas podem assumir qualquer valor pertencente ao conjunto dos números reais desde de que esse valor respeite as restrições do modelo. Porém, em muitos problemas do mundo real, as variáveis de decisão só fazem sentido se assumirem valores inteiros. Quando modelamos um problema de PL onde todas as variáveis de decisão têm a restrição de só assumirem valores inteiros, chamamos o modelo gerado de um modelo de \textbf{Programação Linear Inteira} ou simplesmente \textbf{Programação Inteira (PI)}. Também são encontrados problemas em que só parte das variáveis de decisão necessitam ser inteiras. Esses são chamados problemas de \textbf{Programação Inteira Mista (PIM)}. 
 
@@ -136,15 +134,15 @@ Considere o Exemplo 2, apresentado na seção anterior. Se for adicionada a rest
 
 Problemas de PI puros (que só possuem variáveis inteiras) com uma região de soluções viáveis limitada têm a garantia de possuírem apenas um número finito de soluções viáveis. Isso pode dar a falsa impressão de que problemas de PI são fáceis de resolver, porém isso não é verdade \cite{hillier2010introduccao}. \citeonline{schrijver1998theory} demonstra que resolver um problema de PI em sua versão de decisão é um problema NP-completo.
 
-\subsection{\textit{Educational Timetabling}}
+\section{\textit{Educational Timetabling}}
 
 \textbf{\textit{Educational Timetabling}} trata de problemas de alocação envolvendo universidades e escolas de ensino médio. \citeonline{kingston2013educational} divide esses problemas em três classes de problemas, são eles: \textit{school timetabling}, \textit{course timetabling} e \textit{examination timetabling}. \textit{School timetabling} se refere a problemas de alocação em escolas de ensino médio. Os outros dois, \textit{course timetabling} e \textit{examination timetabling}, tratam de problemas de alocação de horários de disciplinas e provas em universidades. Adiante será dada um explicação mais precisa sobre cada uma dessas classes de problemas.
 
-\subsubsection{\textit{School Timetabling}}
+\subsection{\textit{School Timetabling}}
 
 No problema de \textbf{\textit{school timetabling}}, a alocação é dada para ciclos semanais ou quinzenais. Os horários são particionados em períodos de mesmo tamanho. O problema também tem a característica de que os estudantes estão agrupados em classes \cite{kingston2004tiling}. A forma tradicional do problema consiste na atribuição de aulas a períodos de tal forma que nenhum professor ou classe se envolva em mais de uma aula ao mesmo tempo \cite{vslechta2004decomposition}. 
 
-\subsubsection{\textit{Course Timetabling}}
+\subsection{\textit{Course Timetabling}}
 
 \textbf{\textit{Course timetabling}} é um problema de alocação voltado para as universidades. Nesse problema, um conjunto de disciplinas devem ser associadas a uma grade de horários e a um conjunto salas de aula. Além disso, determinadas restrições devem ser respeitadas: um professor não pode estar associado a mais de uma disciplina em um mesmo período; uma sala de aula não pode receber dois cursos ao mesmo tempo; disciplinas de um mesmo curso não podem compartilhar um período, etc. Se for impossível satisfazer todas as restrições, o número de restrições violadas deve ser minimizado \cite{lach2012curriculum}.
 
@@ -154,7 +152,7 @@ Diferente de \textit{school timetabling}, \textit{course timetabling} não agrup
 
 Este trabalho trata de um problema similar aos de \textit{course timetabling}, onde são levadas em conta problemas encontrados no processo de alocação da UFC-Quixadá. Por esse motivo, o problema abordado aqui tem algumas diferenças com relação aos de \textit{course timetabling}. Um exemplo é a alocação em salas de aulas, que não é levada em conta neste trabalho. São consideradas aqui apenas as alocações de professores em disciplinas, e de disciplinas em horários. 
 
-\subsubsection{\textit{Examination Timetabling}}
+\subsection{\textit{Examination Timetabling}}
 
 \textbf{\textit{Examination timetabling}} é definido como sendo a atribuição de um conjunto de exames (ou provas) a um número limitado de horários sujeito a um conjunto de restrições \cite{yang2004novel}. Essa a alocação deve evitar choque de horários entre exames de cursos que tenham alunos em comum \cite{schaerf1999survey}.
 
