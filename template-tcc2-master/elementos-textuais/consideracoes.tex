@@ -1,17 +1,17 @@
 \chapter{Considerações Finais}
 \label{chap:consideracoes}
 
-Parte final do texto na qual se apresentam as conclusões apoiadas no desenvolvimento do assunto. É a recapitulação sintética dos resultados obtidos. Pode apresentar recomendações e sugestões para pesquisas futuras.
+Neste trabalho, desenvolvemos um modelo de PI para o problema de alocação de professores e disciplinas da UFC-Quixadá. O modelo desenvolvido busca maximizar a preferência geral dos professores e minimiza o número de alunos que podem fazer pares de disciplinas com choque de horário.
 
-Os objetivos gerais guiam todo o trabalho de redação das considerações finais. Sendo assim, pode-se começar relendo os objetivos e analisando se eles foram, ou não, comprovadamente atingidos ao longo do trabalho. 
+Inicialmente fizemos um levantamento das restrições de alocação aplicadas atualmente na UFC-Quixadá. Modelamos essas restrições como um problema de PI, buscando tratar a maximização das preferências dos professores e a minimização dos choques de horários na função objetivo do modelo. Implementamos o modelo e realizamos testes convertendo as ofertas das disciplinas da UFC-Quixadá de 2016.2 como entrada para a implementação.
 
-Aqui apresentam-se os pontos positivos e negativos da jornada, sempre visando responder aos objetivos traçados na introdução da monografia.
+A partir dos testes realizados, ficou claro que a abordagem proposta por este trabalho não é efetiva para solucionar o problema de alocação da UFC-Quixadá. Mesmo obtendo uma solução viável para 100\% dos dados quando $\alpha = 0.5$, não há garantias de que a solução viável encontrada seja melhor do que a já produzida. Além disso, através do resultado para a instância com 90\% dos dados e com valor $\alpha = 0.5$, podemos ver que não há garantia nem de que encontremos uma solução viável antes que haja estouro de memória no processo de busca mesmo para instâncias menores.
 
-Isaac Newton certa vez afirmou: “se vim mais longe foi por estar no ombro de gigantes”. Deve-se reconhecer, para este trabalho, a contribuição dos que o antecederam. Mostra-se de que forma autores pesquisados e trabalhos anteriores contribuíram para o desenvolvimento do seu trabalho.
+Podemos concluir que é necessário buscar uma estratégia mais eficiente se quisermos realizar a alocação de professores e disciplinas para uma quantidade de dados de tamanho igual a que é alocada na UFC-Quixadá atualmente. 
 
-É raro se encontrar citações nas considerações finais. Uma possibilidade é quando se deseja comparar os resultados obtidos com os resultados de outras pesquisas.  Por exemplo, em trabalhos de otimização de alguma coisa, e se chegou a resultados diferentes de que outro pesquisador, este outro pesquisador pode ser citado e ter seus resultados comparados com o que foi alcançado.
-
-Responda à questão: qual a contribuição do seu trabalho? Para tanto, volte à introdução, veja a contribuição prometida para a pesquisa, e comente a contribuição agora com base nos resultados do trabalho.
-
-Opine! Aproveite! Essa é uma rara chance em que você tem liberdade para expressar sua opinião sem precisar buscar fundamentação na bibliografia ou nos dados coletados.
-Relacione os aspectos que ficaram de fora do escopo do seu trabalho, apresentando-os como sugestões de trabalhos futuros. Desta forma, outros pesquisadores poderão dar continuidade ao que você construiu
+Como trabalhos futuros, destacamos os seguintes:
+\begin{alineascomponto}
+\item Observando os experimentos, percebemos que para instâncias menores (de 10 e 20\%) o modelo se mostrou eficiente para encontrar uma solução ótima. Baseado nisso, uma possível abordagem para resolver o problema pode ser a aplicação de um modelo de PI para fazer a alocação das disciplinas de cada curso. Essa abordagem pode se mostrar efetiva, apesar de não garantir uma solução ótima para o problema de alocação completa do campus.
+\item Comparar nosso método de alocação com outros método propostos. Na literatura encontramos diversas abordagens para problema de alocação utilizando Inteligência Artificial. Talvez seja interessante a implementação de algum desses métodos realizando um comparação com o nosso.
+\item Dado que a alocação de professores na UFC-Quixadá já é feita de forma automatizada. Algo interessante seria o desenvolvimento de um sistema com foco na facilidade de uso para usuários não especialistas no assunto. Isso eliminaria a necessidade de uma pessoa especialista realizando a tarefa de preparação dos dados, sobrando para essa pessoa apenas a tarefa de supervisionar todo o processo.
+\end{alineascomponto}

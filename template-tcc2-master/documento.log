@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.16)  19 NOV 2016 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.16)  30 NOV 2016 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1491,7 +1491,110 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 LaTeX Warning: Unused global option(s):
     [section=title].
 
-(./documento.aux)
+(./documento.aux
+
+LaTeX Warning: Label `r1' multiply defined.
+
+
+LaTeX Warning: Label `r2' multiply defined.
+
+
+LaTeX Warning: Label `r3' multiply defined.
+
+
+LaTeX Warning: Label `r4' multiply defined.
+
+
+LaTeX Warning: Label `r5' multiply defined.
+
+
+LaTeX Warning: Label `r6' multiply defined.
+
+
+LaTeX Warning: Label `r7' multiply defined.
+
+
+LaTeX Warning: Label `r8' multiply defined.
+
+
+LaTeX Warning: Label `r9' multiply defined.
+
+
+LaTeX Warning: Label `r10' multiply defined.
+
+
+LaTeX Warning: Label `r11' multiply defined.
+
+
+LaTeX Warning: Label `r12' multiply defined.
+
+
+LaTeX Warning: Label `r13' multiply defined.
+
+
+LaTeX Warning: Label `r14' multiply defined.
+
+
+LaTeX Warning: Label `r16' multiply defined.
+
+
+LaTeX Warning: Label `r17' multiply defined.
+
+
+LaTeX Warning: Label `r18' multiply defined.
+
+
+LaTeX Warning: Label `r19' multiply defined.
+
+
+LaTeX Warning: Label `r20' multiply defined.
+
+
+LaTeX Warning: Label `r21' multiply defined.
+
+
+LaTeX Warning: Label `r22' multiply defined.
+
+
+LaTeX Warning: Label `r23' multiply defined.
+
+
+LaTeX Warning: Label `r24' multiply defined.
+
+
+LaTeX Warning: Label `r25' multiply defined.
+
+
+LaTeX Warning: Label `r26' multiply defined.
+
+
+LaTeX Warning: Label `r27' multiply defined.
+
+
+LaTeX Warning: Label `r28' multiply defined.
+
+
+LaTeX Warning: Label `r29' multiply defined.
+
+
+LaTeX Warning: Label `r30' multiply defined.
+
+
+LaTeX Warning: Label `r31' multiply defined.
+
+
+LaTeX Warning: Label `r32' multiply defined.
+
+
+LaTeX Warning: Label `r33' multiply defined.
+
+
+LaTeX Warning: Label `r34' multiply defined.
+
+
+LaTeX Warning: Label `r35' multiply defined.
+
+)
 \openout1 = `documento.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
@@ -1719,12 +1822,7 @@ Overfull \hbox (4.56003pt too wide) in paragraph at lines 165--165
 []|  |  $[]$ 
  []
 
-[2] (./elementos-pre-textuais/dedicatoria.tex)
-Overfull \hbox (4.56003pt too wide) in paragraph at lines 166--167
-[]|  |  $[]$
- []
-
-[3] (./elementos-pre-textuais/agradecimentos.tex) [4
+[2] (./elementos-pre-textuais/agradecimentos.tex) [3
 
 ]
 (./elementos-pre-textuais/epigrafe.tex)
@@ -1732,43 +1830,32 @@ Overfull \hbox (4.56003pt too wide) in paragraph at lines 168--169
 []|  |  $[]$
  []
 
-[5
+[4
 
-] (./elementos-pre-textuais/resumo.tex) [6]
-(./elementos-pre-textuais/abstract.tex) [7
+] (./elementos-pre-textuais/resumo.tex) [5]
+(./elementos-pre-textuais/abstract.tex) [6
 
-] (./documento.lof) [8
+] (./documento.lof) [7
 
 ]
-(./documento.lot) [9] (./documento.loq) [10]
-(./elementos-pre-textuais/lista-de-abreviaturas-siglas-aux.tex [11
+(./documento.lot) [8]
+(./elementos-pre-textuais/lista-de-abreviaturas-siglas-aux.tex [9
 
 ])
-(./elementos-pre-textuais/lista-de-simbolos.tex [12
-
-
-]) (./documento.toc
+(./documento.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 16.
-)
-[13
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 14.
+) [10
 
-] (./elementos-textuais/introducao.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
- [14
+] (./elementos-textuais/introducao.tex [11
 
 
 ])
-(./elementos-textuais/fundamentacao-teorica.tex [15] [16
+(./elementos-textuais/fundamentacao-teorica.tex [12] [13
 
-] [17] [18] [19]
-[20] [21]) (./elementos-textuais/modelo-para-o-papd.tex [22]
-<figuras/tabela-de-slots.png, id=241, 1090.0725pt x 355.3275pt>
+] [14] [15] [16]
+[17] [18]) (./elementos-textuais/modelo-para-o-papd.tex [19]
+<figuras/tabela-de-slots.png, id=226, 1090.0725pt x 355.3275pt>
 File: figuras/tabela-de-slots.png Graphic file (type png)
 
 <use figuras/tabela-de-slots.png>
@@ -1778,41 +1865,50 @@ File: figuras/tabela-de-slots.png Graphic file (type png)
  <use figuras/tabela-de-slots.png>
 Package pdftex.def Info: figuras/tabela-de-slots.png used on input line 18.
 (pdftex.def)             Requested size: 436.02127pt x 142.12846pt.
- [23
+ [20
 
- <./figuras/tabela-de-slots.png (PNG copy)>] [24]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 57.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
+ <./figuras/tabela-de-slots.png (PNG copy)>] [21] [22] [23] [24] [25] [26] [27]
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
- [25] [26] [27]
-[28] [29]) (./documento.bbl [30]
+(./elementos-textuais/resultados.tex [28]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[29
+
+] [30] <figuras/alocacao.jpg, id=343, 1351.0475pt x 444.66125pt>
+File: figuras/alocacao.jpg Graphic file (type jpg)
+
+<use figuras/alocacao.jpg>
+Package pdftex.def Info: figuras/alocacao.jpg used on input line 85.
+(pdftex.def)             Requested size: 432.34404pt x 142.2945pt.
+File: figuras/alocacao.jpg Graphic file (type jpg)
+ <use figuras/alocacao.jpg>
+Package pdftex.def Info: figuras/alocacao.jpg used on input line 85.
+(pdftex.def)             Requested size: 432.34404pt x 142.2945pt.
+)
+(./elementos-textuais/consideracoes.tex [31 <./figuras/alocacao.jpg>] [32
+
+])
+(./documento.bbl [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\uppercase' on input line 3.
 
 bibitemlist
-) (./elementos-pos-textuais/apendices/historico-de-mudancas.tex [31
-
-])
-(./elementos-pos-textuais/apendices/lorem-ipsum.tex [32
-
-])
-(./elementos-pos-textuais/anexos/exemplo-de-anexo.tex [33
-
-])
-(./elementos-pos-textuais/anexos/dinamica-das-classes-sociais.tex [34
-
-])
+)
 
 Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.)
 This document will not have a glossary.
 
-[35
+[34
 
 ]
 \tf@lof=\write8
@@ -1821,31 +1917,28 @@ This document will not have a glossary.
 \tf@lot=\write9
 \openout9 = `documento.lot'.
 
-\tf@loq=\write10
-\openout10 = `documento.loq'.
+\tf@toc=\write10
+\openout10 = `documento.toc'.
 
-\tf@toc=\write11
-\openout11 = `documento.toc'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 212.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 212.
  (./documento.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 212.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 212.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 212.
  ) 
 Here is how much of TeX's memory you used:
- 25267 strings out of 493029
- 385035 string characters out of 6136233
- 733191 words of memory out of 5000000
- 27987 multiletter control sequences out of 15000+600000
- 72958 words of font info for 249 fonts, out of 8000000 for 9000
+ 25226 strings out of 493029
+ 383755 string characters out of 6136233
+ 743179 words of memory out of 5000000
+ 27982 multiletter control sequences out of 15000+600000
+ 63024 words of font info for 232 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,18n,92p,2035b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,18n,92p,2035b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -1857,10 +1950,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (37 pages, 407948 bytes).
+Output written on documento.pdf (36 pages, 458441 bytes).
 PDF statistics:
- 484 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 106 named destinations out of 1000 (max. 500000)
- 31431 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 485 PDF objects out of 1000 (max. 8388607)
+ 420 compressed objects within 5 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 26804 words of extra memory for PDF output out of 29859 (max. 10000000)
 
