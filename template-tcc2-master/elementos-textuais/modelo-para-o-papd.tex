@@ -19,7 +19,7 @@ Neste trabalho, mapeamos os \textit{slots} para valores inteiros, dessa forma os
 \end{figure}
 
 
-Para os professores, há uma carga horária máxima e mínima para cumprir. Essa carga horária pode ser diferente para cada professor, já que alguns professores realizam atividades como coordenação de curso e etc. O número de disciplinas que um professor deve ser associado depende então do número de créditos das disciplinas. 
+Para os professores, há uma carga horária máxima e mínima para cumprir. Essa carga horária pode ser diferente para cada professor, já que alguns professores realizam atividades como coordenação de curso e etc. O número de disciplinas que um professor deve ser associado depende então de sua carga horário máxima e mínima e do número de créditos das disciplinas. 
 
 Há também restrições que definem os horários e os dias aos quais os professores não devem ser alocados:
 
@@ -27,22 +27,22 @@ Há também restrições que definem os horários e os dias aos quais os profess
 \item professores não devem ser alocados nos três turnos de um mesmo dia;
 \item professores não devem ser alocados no último horário de um dia e no primeiro horário do dia seguinte;
 \item professores devem estar livres no horário CD da manhã ou no AB da tarde de quarta (seminários);
-\item professores devem ter a segunda-feira ou a sexta-feira live;
+\item um professor deve ter a segunda-feira ou a sexta-feira live;
 \item o dia livre (segunda-feira ou sexta-feira) é o mesmo para casais de professores;
 \item professores não devem ser alocados a nenhum disciplina nos horários das reuniões que participam.
 \end{alineascomponto}
 
-A UFC-Quixadá conta atualmente com seis cursos de graduação. Todo semestre os cursos ofertam um conjunto de disciplinas, de forma que as disciplinas a serem alocadas num semestre são as ofertadas por um curso. As disciplinas estão agrupadas nesses cursos de forma que algumas delas são compartilhadas entre cursos e outras não. Embora essas disciplinas sejam compartilhadas, cada oferta é específica de um curso. 
+A UFC-Quixadá conta atualmente com seis cursos de graduação. Todo semestre os cursos ofertam um conjunto de disciplinas, de forma que as disciplinas a serem alocadas em um semestre são as ofertadas pelos cursos. As disciplinas estão agrupadas nesses cursos de forma que algumas delas são compartilhadas entre cursos e outras não. Embora essas disciplinas sejam compartilhadas, cada oferta é específica de um curso. 
 
 A maioria dos cursos são de horário integral, ou seja, utilizam os turnos da manhã e da tarde para alocar suas disciplinas. Porém cada curso opta por um horário preferencial, onde a maioria das disciplinas obrigatórias são alocadas. Em alguns casos, a soma de créditos das disciplinas obrigatórias de um semestre de um cursos excede a quantidade de créditos de um turno (10 créditos). Para resolver isso os cursos optam por alocar os créditos excedentes em outro turno, já que é imprescindível que disciplinas obrigatórias de um mesmo semestre não choquem horário. Para representar isso em nosso modelo definimos um horário primário e um horário secundário parar cada curso. O horário primário é onde são alocadas as disciplinas obrigatórias, e o secundário é onde são alocadas as disciplinas obrigatórias excedentes. As disciplinas optativas são livres para serem alocadas em qualquer horário.
 
 Assim como os professores, as disciplinas tem seu conjunto de restrições:
 
 \begin{alineascomponto}
-\item as disciplinas tem um número fixo de professores que deveram ser associados a ela;
+\item uma disciplina tem um número fixo de professores que deveram ser associados a ela;
 \item disciplinas associadas a um professor não compartilham \textit{slots};
 \item disciplinas obrigatórias de um mesmo semestre de um mesmo curso não devem compartilhar \textit{slots};
-\item número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos;
+\item o número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos;
 \item uma disciplina pode ter seus horários prefixados;
 \item uma disciplina deve compartilhar \textit{slots} com seus pré-requisitos.
 \end{alineascomponto} 
@@ -62,7 +62,6 @@ A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos
     \item $D_{kc}^{ob}$ - disciplinas obrigatórias de um semestre $k$ de um curso $c$;
     \item $D_{c}^{op}$ - disciplinas optativas de um curso $c$;
 	\item $S$ - \textit{slots};
-	\item $I_p$ - pares de incompatibilidade de \textit{slots} do professor $p$;
 	\item $S_{pri_c}$ - \textit{slots} do turno primário do curso $c$;
 	\item $S_{sec_c}$ - \textit{slots} do turno secundário do curso $c$;
 	\item $T_i$ - pré-requisitos da disciplina $i$;
@@ -72,8 +71,8 @@ A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos
 	\item $S_r$ - \textit{slots} da reunião $r$;
 	\item $A$ - casais de professores;
 	\item $G_m$ - grupos de \textit{slots} de tamanho $m$.
-	\item $max_p$ - numero máximo de créditos do professor $p$;
-    \item $min_p$ - numero mínimo de créditos do professor $p$;
+	\item $max_p$ - número máximo de créditos do professor $p$;
+    \item $min_p$ - número mínimo de créditos do professor $p$;
 	\item $a_{ij}$ - número de alunos que podem cursar as disciplinas $i$ e $j$;
 	\item $b_{pi}$ - nível de preferência do professor $p$ pela disciplina $i$;	
 	\item $crd_i$ - número de créditos da disciplina $i$;
@@ -121,7 +120,7 @@ A Restrição \ref{r5} se refere aos seminários, em que os professores devem es
 w_{p14} + w_{p15} \leq 1, \forall{p\in{P}} &&
 \end{eqnarray}
 
-As Restrições \ref{r6} e \ref{r7} definem que um professor deve ter todos seus horários livre na segunda-feira ou na sexta-feira.
+As Restrições \ref{r6} e \ref{r7} definem que um professor deve ter a segunda-feira ou a sexta-feira livre.
 \begin{eqnarray}
 \label{r6}
 \sum_{s\in\{{1, 2, ..., 6}\}}{w_{ps}} \leq 6*v_p, \forall{p \in{P}} &&\\
@@ -182,7 +181,7 @@ As Restrições \ref{r15}, \ref{r16} e \ref{r17} referem-se as disciplinas obrig
 2*\sum_{i \in{D_{kc}^{ob}}}^{}{\sum_{s \in{S_{sec_c}}}^{}{y_{is}}}\geq (1 - u_{kc}) * (-20+\sum_{i \in{D_{kc}^{ob}}}^{}{crd_i}),\forall{k}\in{K_c}, \forall{c}\in{C}&&
 \end{eqnarray}
 
-A Restrição \ref{r18} diz o número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos. Essa Restrição além de garantir que todas as disciplinas serão alocadas, também garante que serão alocadas à quantidade adequada de \textit{slots}.
+A Restrição \ref{r18} diz que o número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos. Essa Restrição além de garantir que todas as disciplinas serão alocadas, também garante que serão alocadas à quantidade adequada de \textit{slots}.
 \begin{eqnarray}
 \label{r18}
 2*\sum_{s \in S}^{}{y_{is}} = crd_i, \forall{i}\in{D}  &&
