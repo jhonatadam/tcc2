@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.16)  1 DEC 2016 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.16)  16 DEC 2016 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1764,45 +1764,45 @@ l.161 	\imprimirfolhaderosto{}
 
 
 ]
-<elementos-pre-textuais/ficha-catalografica.pdf, id=23, 597.23125pt x 845.1575p
+<elementos-pre-textuais/ficha-catalografica.pdf, id=23, 597.51233pt x 845.0471p
 t>
 File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
  <use elementos-pre-textuais/ficha-catalografica.pdf>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf used on
  input line 163.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+(pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
 
 <use elementos-pre-textuais/ficha-catalografica.pdf>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf used on
  input line 163.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+(pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 
-<elementos-pre-textuais/ficha-catalografica.pdf, id=26, page=1, 597.23125pt x 8
-45.1575pt>
+<elementos-pre-textuais/ficha-catalografica.pdf, id=26, page=1, 597.51233pt x 8
+45.0471pt>
 File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
  <use elementos-pre-textuais/ficha-catalografica.pdf, page 1>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf, page1 
 used on input line 163.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+(pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
 
 <use elementos-pre-textuais/ficha-catalografica.pdf, page 1>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf, page1 
 used on input line 163.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+(pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
 
 <use elementos-pre-textuais/ficha-catalografica.pdf, page 1>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf, page1 
 used on input line 163.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+(pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
 
 <use elementos-pre-textuais/ficha-catalografica.pdf, page 1>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf, page1 
 used on input line 163.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+(pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1814,7 +1814,7 @@ File: elementos-pre-textuais/ficha-catalografica.pdf Graphic file (type pdf)
 <use elementos-pre-textuais/ficha-catalografica.pdf, page 1>
 Package pdftex.def Info: elementos-pre-textuais/ficha-catalografica.pdf, page1 
 used on input line 163.
-(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+(pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
  [1
 
  <./elementos-pre-textuais/ficha-catalografica.pdf>]
@@ -1855,7 +1855,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 
 ] [14] [15] [16]
 [17] [18]) (./elementos-textuais/modelo-para-o-papd.tex [19]
-<figuras/tabela-de-slots.png, id=226, 1090.0725pt x 355.3275pt>
+<figuras/tabela-de-slots.png, id=221, 1090.0725pt x 355.3275pt>
 File: figuras/tabela-de-slots.png Graphic file (type png)
 
 <use figuras/tabela-de-slots.png>
@@ -1882,7 +1882,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [29
 
-] [30] <figuras/alocacao.jpg, id=343, 1351.0475pt x 444.66125pt>
+] [30] <figuras/alocacao.jpg, id=338, 1351.0475pt x 444.66125pt>
 File: figuras/alocacao.jpg Graphic file (type jpg)
 
 <use figuras/alocacao.jpg>
@@ -1950,10 +1950,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on documento.pdf (36 pages, 458478 bytes).
+Output written on documento.pdf (36 pages, 440076 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 420 compressed objects within 5 object streams
+ 480 PDF objects out of 1000 (max. 8388607)
+ 417 compressed objects within 5 object streams
  105 named destinations out of 1000 (max. 500000)
  26804 words of extra memory for PDF output out of 29859 (max. 10000000)
 
