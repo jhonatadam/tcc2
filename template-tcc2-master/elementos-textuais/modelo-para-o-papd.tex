@@ -1,9 +1,9 @@
 \chapter{Modelo para o PAPD}
 \label{cap:modelo-para-o-papd}
 
-A construção de um modelo de PI para o problema de alocação de professores da UFC-Quixadá demanda o conhecimento de algumas informações relevantes no domínio do problema. Dessa forma, foi feito um levantamento de como é realizada atualmente a alocação na UFC-Quixadá, e chegamos as informações que são importantes para a alocação dos professores e das disciplinas. 
+A construção de um modelo de PI para o problema de alocação de professores da UFC-Quixadá demanda o conhecimento de algumas informações relevantes no domínio do problema. Dessa forma, foi feito um levantamento de como é realizada atualmente a alocação na UFC-Quixadá, e chegamos às informações que são importantes para a alocação dos professores e das disciplinas. 
 
-A alocação é feita sobre uma grade de horários semanal. Cada elemento dessa grade representa um horário disponível para alocação ao qual chamamos de \textbf{\textit{slot}}. Um \textit{slot} tem o valor de dois créditos (2 horas), ou seja, uma disciplinas de quatro créditos demanda dois \textit{slots} para ser alocada. Um único dia agrupa seis \textit{slots}, aos quais estão divididos nos três turnos de um dia (manhã, tarde e noite). Um turno de um dia agrupa dois \textit{slots}, o \textit{slot} AB e o \textit{slot} CD do turno. 
+A alocação é feita sobre uma grade de horários semanal. Cada elemento dessa grade representa um horário disponível para alocação ao qual chamamos de \textbf{\textit{slot}}. Um \textit{slot} tem o valor de dois créditos (2 horas), ou seja, uma disciplinas de quatro créditos demanda dois \textit{slots} para ser alocada. Um único dia agrupa seis \textit{slots}, os quais estão divididos nos três turnos de um dia (manhã, tarde e noite). Um turno de um dia agrupa dois \textit{slots}, o \textit{slot} AB e o \textit{slot} CD do turno. 
 
 Neste trabalho, mapeamos os \textit{slots} para valores inteiros, dessa forma os \textit{slots} da segunda-feira são representados pelos valores: 1, 2, 3, 4, 5 e 6; os da terça-feira: 7, 8, 9, 10, 11 e 12; e assim por diante. A tabela abaixo mostra de forma completa como os \textit{slots} estão organizados na grade de horários.
 
@@ -34,22 +34,22 @@ Há também restrições que definem os horários e os dias aos quais os profess
 
 A UFC-Quixadá conta atualmente com seis cursos de graduação. Todo semestre os cursos ofertam um conjunto de disciplinas, de forma que as disciplinas a serem alocadas em um semestre são as ofertadas pelos cursos. As disciplinas estão agrupadas nesses cursos de forma que algumas delas são compartilhadas entre cursos e outras não. Embora essas disciplinas sejam compartilhadas, cada oferta é específica de um curso. 
 
-A maioria dos cursos são de horário integral, ou seja, utilizam os turnos da manhã e da tarde para alocar suas disciplinas. Porém cada curso opta por um horário preferencial, onde a maioria das disciplinas obrigatórias são alocadas. Em alguns casos, a soma de créditos das disciplinas obrigatórias de um semestre de um cursos excede a quantidade de créditos de um turno (10 créditos). Para resolver isso os cursos optam por alocar os créditos excedentes em outro turno, já que é imprescindível que disciplinas obrigatórias de um mesmo semestre não choquem horário. Para representar isso em nosso modelo definimos um horário primário e um horário secundário parar cada curso. O horário primário é onde são alocadas as disciplinas obrigatórias, e o secundário é onde são alocadas as disciplinas obrigatórias excedentes. As disciplinas optativas são livres para serem alocadas em qualquer horário.
+A maioria dos cursos são de horário integral, ou seja, utilizam os turnos da manhã e da tarde para alocar suas disciplinas. Porém cada curso opta por um horário preferencial, onde a maioria das disciplinas obrigatórias são alocadas. Em alguns casos, a soma de créditos das disciplinas obrigatórias de um semestre de um cursos excede a quantidade de créditos de um turno (10 créditos). Para resolver isso os cursos optam por alocar os créditos excedentes em outro turno, já que é imprescindível que disciplinas obrigatórias de um mesmo semestre não choquem horário. Para representar isso em nosso modelo definimos um horário primário e um horário secundário para cada curso. O horário primário é onde são alocadas as disciplinas obrigatórias, e o secundário é onde são alocadas as disciplinas obrigatórias excedentes. As disciplinas optativas são livres para serem alocadas em qualquer horário.
 
-Assim como os professores, as disciplinas tem seu conjunto de restrições:
+Assim como os professores, as disciplinas têm seu conjunto de restrições:
 
 \begin{alineascomponto}
-\item uma disciplina tem um número fixo de professores que deveram ser associados a ela;
-\item disciplinas associadas a um professor não compartilham \textit{slots};
+\item uma disciplina tem um número fixo de professores que deverão ser associados a ela;
+\item disciplinas associadas a um mesmo professor não compartilham \textit{slots};
 \item disciplinas obrigatórias de um mesmo semestre de um mesmo curso não devem compartilhar \textit{slots};
-\item o número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos;
+\item o número de \textit{slots} em que uma disciplina deve ser alocada é igual à metade de seus créditos;
 \item uma disciplina pode ter seus horários prefixados;
 \item uma disciplina deve compartilhar \textit{slots} com seus pré-requisitos.
 \end{alineascomponto} 
 
 Um modelo de PI então foi construído a partir das restrições do problema. O modelo representa as entidades a serem alocadas da seguinte forma: variáveis binárias representam a associação professores/disciplinas e disciplinas/horários (ou \textit{slots}, como chamaremos neste trabalho). Por exemplo: o valor de uma variável $z_{pi}$ é 1 se o professor $p$ está associado à disciplina $i$, e 0 caso contrário. Dessa forma, estão sendo mapeados professores, disciplinas e \textit{slots} para variáveis binárias. Essas compõem as equações e inequações lineares das restrições do modelo.
 
-Definimos que há choque de horários entre duas disciplinas quando elas compartilham pelo menos um \textit{slot}.
+Definimos que há \textbf{choque de horários} entre duas disciplinas quando elas compartilham pelo menos um \textit{slot}.
 
 A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos estão representados em letras maiúsculas e as variáveis em minúsculas. Em seguida, serão apresentadas as restrições e a função objetivo.
 

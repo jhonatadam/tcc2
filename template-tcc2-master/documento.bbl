@@ -1,0 +1,112 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Bertsimas e Tsitsiklis 1997]{bertsimas1997introduction}
+\abntrefinfo{Bertsimas e Tsitsiklis}{BERTSIMAS; TSITSIKLIS}{1997}
+{BERTSIMAS, D.; TSITSIKLIS, J.~N. \textbf{Introduction to linear optimization}.
+  [S.l.]: Athena Scientific Belmont, MA, 1997. v.~6.}
+
+\bibitem[cplusplus 2016]{c++}
+\abntrefinfo{cplusplus}{CPLUSPLUS}{2016}
+{CPLUSPLUS. 2016.
+Dispon{\'\i}vel em: \url{http://www.cplusplus.com/}. Acesso em: 26 Maio 2016.}
+
+\bibitem[Dod{\'o} 2011]{naadriano}
+\abntrefinfo{Dod{\'o}}{DOD{\'O}}{2011}
+{DOD{\'O}, A.~A. \textbf{Aplica{\c{c}}{\~a}o da Teoria dos Jogos na
+  Resolu{\c{c}}{\~a}o do Problema de Aloca{\c{c}}{\~a}o de Professores em
+  Disciplinas}. [S.l.: s.n.], 2011.}
+
+\bibitem[Hillier e Lieberman 2010]{hillier2010introduccao}
+\abntrefinfo{Hillier e Lieberman}{HILLIER; LIEBERMAN}{2010}
+{HILLIER, F.~S.; LIEBERMAN, G.~J. \textbf{Introdu{\c{c}}{\~a}o {\`a} pesquisa
+  operacional}. [S.l.]: McGraw Hill, 2010.}
+
+\bibitem[IBM 2016]{ibmcplex}
+\abntrefinfo{IBM}{IBM}{2016}
+{IBM. \textbf{IBM ILOG CPLEX Optimization Studio}. 2016.
+Dispon{\'\i}vel em:
+  \url{http://www-03.ibm.com/software/products/pt/ibmilogcpleoptistud}. Acesso
+  em: 19 Maio 2016.}
+
+\bibitem[ITC 2016]{itc}
+\abntrefinfo{ITC}{ITC}{2016}
+{ITC. \textbf{International Timetabling Competition}. 2016.
+Dispon{\'\i}vel em: \url{http://www.cs.qub.ac.uk/itc2007/}. Acesso em: 26 Maio
+  2016.}
+
+\bibitem[Kingston 2004]{kingston2004tiling}
+\abntrefinfo{Kingston}{KINGSTON}{2004}
+{KINGSTON, J.~H. A tiling algorithm for high school timetabling. In:
+  \textbf{Practice and Theory of Automated Timetabling V}. [S.l.]: Springer,
+  2004. p. 208--225.}
+
+\bibitem[Kingston 2013]{kingston2013educational}
+\abntrefinfo{Kingston}{KINGSTON}{2013}
+{KINGSTON, J.~H. Educational timetabling. In:  \textbf{Automated Scheduling and
+  Planning}. [S.l.]: Springer, 2013. p. 91--108.}
+
+\bibitem[Lach e L{\"u}bbecke 2012]{lach2012curriculum}
+\abntrefinfo{Lach e L{\"u}bbecke}{LACH; L{\"U}BBECKE}{2012}
+{LACH, G.; L{\"U}BBECKE, M.~E. Curriculum based course timetabling: new
+  solutions to udine benchmark instances.
+\textbf{Annals of Operations Research}, Springer, v.~194, n.~1, p. 255--272,
+  2012.}
+
+\bibitem[Lewis 2008]{Lewis2008}
+\abntrefinfo{Lewis}{LEWIS}{2008}
+{LEWIS, R. A survey of metaheuristic-based techniques for university
+  timetabling problems.
+\textbf{OR Spectrum}, v.~30, n.~1, p. 167--190, 2008.
+ISSN 1436-6304.
+Dispon{\'\i}vel em: \url{http://dx.doi.org/10.1007/s00291-007-0097-0}.}
+
+\bibitem[Luenberger e Ye 1984]{luenberger1984linear}
+\abntrefinfo{Luenberger e Ye}{LUENBERGER; YE}{1984}
+{LUENBERGER, D.~G.; YE, Y. \textbf{Linear and nonlinear programming}. [S.l.]:
+  Springer, 1984. v.~2.}
+
+\bibitem[python 2016]{python}
+\abntrefinfo{python}{PYTHON}{2016}
+{PYTHON. 2016.
+Dispon{\'\i}vel em: \url{https://www.python.org/}. Acesso em: 19 Novembro
+  2016.}
+
+\bibitem[qt 2016]{qt}
+\abntrefinfo{qt}{QT}{2016}
+{QT. 2016.
+Dispon{\'\i}vel em: \url{https://www.qt.io/}. Acesso em: 26 Maio 2016.}
+
+\bibitem[Schaerf 1999]{schaerf1999survey}
+\abntrefinfo{Schaerf}{SCHAERF}{1999}
+{SCHAERF, A. A survey of automated timetabling.
+\textbf{Artificial intelligence review}, Springer, v.~13, n.~2, p. 87--127,
+  1999.}
+
+\bibitem[Schrijver 1998]{schrijver1998theory}
+\abntrefinfo{Schrijver}{SCHRIJVER}{1998}
+{SCHRIJVER, A. \textbf{Theory of linear and integer programming}. [S.l.]: John
+  Wiley \& Sons, 1998.}
+
+\bibitem[{\v{S}}lechta 2004]{vslechta2004decomposition}
+\abntrefinfo{{\v{S}}lechta}{{\v{S}}LECHTA}{2004}
+{{\v{S}}LECHTA, P. Decomposition and parallelization of multi-resource
+  timetabling problems. In:  \textbf{Practice and Theory of Automated
+  Timetabling V}. [S.l.]: Springer, 2004. p. 177--189.}
+
+\bibitem[SQLite 2016]{sqlite}
+\abntrefinfo{SQLite}{SQLITE}{2016}
+{SQLITE. 2016.
+Dispon{\'\i}vel em: \url{https://www.sqlite.org/}. Acesso em: 26 Maio 2016.}
+
+\bibitem[Yang e Petrovic 2004]{yang2004novel}
+\abntrefinfo{Yang e Petrovic}{YANG; PETROVIC}{2004}
+{YANG, Y.; PETROVIC, S. A novel similarity measure for heuristic selection in
+  examination timetabling. In:  \textbf{Practice and Theory of Automated
+  Timetabling V}. [S.l.]: Springer, 2004. p. 247--269.}
+
+\end{thebibliography}
