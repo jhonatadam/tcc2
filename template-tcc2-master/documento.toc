@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {2.3.2}\textit {Course Timetabling}}{19}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}\textit {Examination Timetabling}}{19}{subsection.2.3.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Modelo para o PAPD}}{20}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Modelo para o PAPD da UFC-Quixad\IeC {\'a}}}{20}{chapter.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Resultados}}{29}{chapter.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }

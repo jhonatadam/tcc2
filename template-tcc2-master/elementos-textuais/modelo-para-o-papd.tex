@@ -1,4 +1,4 @@
-\chapter{Modelo para o PAPD}
+\chapter{Modelo para o PAPD da UFC-Quixadá}
 \label{cap:modelo-para-o-papd}
 
 A construção de um modelo de PI para o problema de alocação de professores da UFC-Quixadá demanda o conhecimento de algumas informações relevantes no domínio do problema. Dessa forma, foi feito um levantamento de como é realizada atualmente a alocação na UFC-Quixadá, e chegamos às informações que são importantes para a alocação dos professores e das disciplinas. 
@@ -19,17 +19,17 @@ Neste trabalho, mapeamos os \textit{slots} para valores inteiros, dessa forma os
 \end{figure}
 
 
-Para os professores, há uma carga horária máxima e mínima para cumprir. Essa carga horária pode ser diferente para cada professor, já que alguns professores realizam atividades como coordenação de curso e etc. O número de disciplinas que um professor deve ser associado depende então de sua carga horário máxima e mínima e do número de créditos das disciplinas. 
+Para os professores, há uma carga horária máxima e mínima para cumprir. Essa carga horária pode ser diferente para cada professor, já que alguns professores realizam atividades como coordenação de curso, que permitem redução de carga horária. O número de disciplinas que um professor deve ser associado depende então de sua carga horário máxima e mínima e do número de créditos das disciplinas. 
 
 Há também restrições que definem os horários e os dias aos quais os professores não devem ser alocados:
 
 \begin{alineascomponto}
-\item professores não devem ser alocados nos três turnos de um mesmo dia;
+\item professores não devem ser alocados nos três turnos de um mesmo dia (essa restrição pode ser quebrada desde que autorizado por escrito pelo professor. Mantivemos obrigatória para todos os professores em nossa implementação);
 \item professores não devem ser alocados no último horário de um dia e no primeiro horário do dia seguinte;
-\item professores devem estar livres no horário CD da manhã ou no AB da tarde de quarta (seminários);
+\item professores devem estar livres no horário CD da manhã ou no AB da tarde de quarta (para os encontros denominados ``seminários'');
 \item um professor deve ter a segunda-feira ou a sexta-feira live;
 \item o dia livre (segunda-feira ou sexta-feira) é o mesmo para casais de professores;
-\item professores não devem ser alocados a nenhum disciplina nos horários das reuniões que participam.
+\item professores não devem ser alocados a nenhuma disciplina nos horários das reuniões que participam.
 \end{alineascomponto}
 
 A UFC-Quixadá conta atualmente com seis cursos de graduação. Todo semestre os cursos ofertam um conjunto de disciplinas, de forma que as disciplinas a serem alocadas em um semestre são as ofertadas pelos cursos. As disciplinas estão agrupadas nesses cursos de forma que algumas delas são compartilhadas entre cursos e outras não. Embora essas disciplinas sejam compartilhadas, cada oferta é específica de um curso. 
@@ -39,7 +39,7 @@ A maioria dos cursos são de horário integral, ou seja, utilizam os turnos da m
 Assim como os professores, as disciplinas têm seu conjunto de restrições:
 
 \begin{alineascomponto}
-\item uma disciplina tem um número fixo de professores que deverão ser associados a ela;
+\item uma disciplina tem um número fixo de professores que devem ser associados a ela;
 \item disciplinas associadas a um mesmo professor não compartilham \textit{slots};
 \item disciplinas obrigatórias de um mesmo semestre de um mesmo curso não devem compartilhar \textit{slots};
 \item o número de \textit{slots} em que uma disciplina deve ser alocada é igual à metade de seus créditos;
@@ -92,14 +92,14 @@ Variáveis:
     \item $x_{ij}$ - 1 se as disciplinas  $i$ e $j$ compartilham \textit{slot}, 0 caso contrário;
 	\item $y_{is}$ - 1 se a disciplina $i$ está alocada no \textit{slot} $s$, 0 caso contrário
 	\item $w_{ps}$ - 1 se o professor $p$ está associado ao \textit{slot} $s$, 0 caso contrário;
-	\item $z_{pi}$ - 1 se o professor $p$ está associado a disciplina $i$, 0 caso contrário;
+	\item $z_{pi}$ - 1 se o professor $p$ está associado à disciplina $i$, 0 caso contrário;
 	\item $u_{kc}$ - 1 se todas as disciplinas obrigatórias do semestre $k$ do curso $c$ estão alocadas no turno primário do próprio curso;
 	\item $v_p$ - 1 se o professor $p$ não dá aula na sexta-feira, 0 se não dá aula na segunda-feira.
 \end{alineascomponto} 
 
-A função objetivo define qual alocação é melhor. Para isso ela leva em conta a preferência geral dos professores e os choques de horários das disciplinas. A somatória $\sum a_{ij} * x_{ij}$ representa, na função objetivo, a soma dos alunos que podem se matricular em disciplinas que compartilham \textit{slots}. A somatória $\sum b_{pi} * z_{pi}$ representa a soma das preferências dos professores. É importante notar que a preferência de um professor por uma disciplinas só é contabilizada se ele estiver associado a essa disciplinas.
+A função objetivo define qual alocação é melhor. Para isso ela leva em conta a preferência geral dos professores e os choques de horários das disciplinas. O somatório $\sum a_{ij} * x_{ij}$ representa, na função objetivo, a soma dos alunos que podem se matricular em disciplinas que compartilham \textit{slots}. O somatório $\sum b_{pi} * z_{pi}$ representa a soma das preferências dos professores. É importante notar que a preferência de um professor por uma disciplinas só é contabilizada se ele estiver associado a essa disciplinas.
 
-É utilizado na função objetivo um parâmetro $\alpha\in[0,1]$. Esse valor balanceia os pesos dos dois lados da função objetivo. Por exemplo, quando $\alpha = 0$, é considerado na função objetivo apenas a preferência dos professores e ignorado o número de alunos que podem fazer pares de disciplinas que compartilham \textit{slots}. Por outro lado, se $\alpha = 1$, é considerado apenas o número de alunos nos choques de horários. Assim, para $\alpha = 0.5$, é dado peso igual para ambos.
+É utilizado na função objetivo um parâmetro $\alpha\in[0,1]$. Esse valor balanceia os pesos dos dois lados da função objetivo. Por exemplo, quando $\alpha = 0$, é considerado na função objetivo apenas a preferência dos professores, e ignorado o número de alunos que podem fazer pares de disciplinas que compartilham \textit{slots}. Por outro lado, se $\alpha = 1$, é considerado apenas o número de alunos nos choques de horários. Assim, para $\alpha = 0.5$, é dado peso igual para ambos.
 
 \emph{Função Objetivo:}
 $$
@@ -193,7 +193,7 @@ As Restrições \ref{r15}, \ref{r16} e \ref{r17} referem-se às disciplinas obri
 2*\sum_{i \in{D_{kc}^{ob}}}^{}{\sum_{s \in{S_{sec_c}}}^{}{y_{is}}}\geq (1 - u_{kc}) * (-20+\sum_{i \in{D_{kc}^{ob}}}^{}{crd_i}),\forall{k}\in{K_c}, \forall{c}\in{C}&&
 \end{eqnarray}
 
-A Restrição \ref{r18} diz que o número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos. Essa Restrição além de garantir que todas as disciplinas serão alocadas, também garante que serão alocadas à quantidade adequada de \textit{slots}.
+A Restrição \ref{r18} diz que o número de \textit{slots} que uma disciplina deve ser alocada é igual a metade de seus créditos. Essa restrição além de garantir que todas as disciplinas serão alocadas, também garante que serão alocadas à quantidade adequada de \textit{slots}.
 \begin{eqnarray}
 \label{r18}
 2*\sum_{s \in S}^{}{y_{is}} = crd_i, \forall{i}\in{D}  &&
@@ -226,7 +226,7 @@ y_{is} = 1, \forall{s \in{H_i}}, \forall{i \in{D}} &&
 A Restrição \ref{r23} define os grupos de \textit{slots} aos quais as disciplinas devem ser alocadas. Essa Restrição tem a função de reduzir os espaço de busca eliminando a simetria nas possibilidades de alocação das disciplinas. É importante notar que para que ela funcione adequadamente não deve haver intersecção entre os grupos de \textit{slots} de mesmo tamanho.
 \begin{eqnarray}
 \label{r23}
-y_{is_1} = y_{is_2}, \forall{s_1, s_2}, \forall{g\in{G_{(crd_i/2)}}}, \forall{i\in{D}} &&
+y_{is_1} = y_{is_2}, \forall{s_1, s_2\in{g}}, \forall{g\in{G_{(crd_i/2)}}}, \forall{i\in{D}} &&
 \end{eqnarray}
 
 As demais restrições são de integridade.
