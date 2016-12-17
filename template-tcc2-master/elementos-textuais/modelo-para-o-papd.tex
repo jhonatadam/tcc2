@@ -44,14 +44,16 @@ Assim como os professores, as disciplinas têm seu conjunto de restrições:
 \item disciplinas obrigatórias de um mesmo semestre de um mesmo curso não devem compartilhar \textit{slots};
 \item o número de \textit{slots} em que uma disciplina deve ser alocada é igual à metade de seus créditos;
 \item uma disciplina pode ter seus horários prefixados;
-\item uma disciplina deve compartilhar \textit{slots} com seus pré-requisitos.
+\item uma disciplina deve compartilhar \textit{slots} com um conjunto prefixado de disciplinas.  
 \end{alineascomponto} 
 
-Um modelo de PI então foi construído a partir das restrições do problema. O modelo representa as entidades a serem alocadas da seguinte forma: variáveis binárias representam a associação professores/disciplinas e disciplinas/horários (ou \textit{slots}, como chamaremos neste trabalho). Por exemplo: o valor de uma variável $z_{pi}$ é 1 se o professor $p$ está associado à disciplina $i$, e 0 caso contrário. Dessa forma, estão sendo mapeados professores, disciplinas e \textit{slots} para variáveis binárias. Essas compõem as equações e inequações lineares das restrições do modelo.
+O modelo de PI proposto neste trabalho foi então construído a partir das restrições do problema. O modelo representa as entidades a serem alocadas da seguinte forma: variáveis binárias representam a associação professores/disciplinas e disciplinas/horários (ou \textit{slots}, como chamaremos neste trabalho). Por exemplo: o valor de uma variável $z_{pi}$ é 1 se o professor $p$ está associado à disciplina $i$, e 0 caso contrário. Dessa forma, estão sendo mapeados professores, disciplinas e \textit{slots} para variáveis binárias. Essas compõem as equações e inequações lineares das restrições do modelo.
 
 Definimos que há \textbf{choque de horários} entre duas disciplinas quando elas compartilham pelo menos um \textit{slot}.
 
-A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos estão representados em letras maiúsculas e as variáveis em minúsculas. Em seguida, serão apresentadas as restrições e a função objetivo.
+A seguir estão as variáveis, parâmetros e conjuntos presentes no modelo. Em seguida, serão apresentadas as restrições e a função objetivo.
+
+Conjuntos:
 
 \begin{alineascomponto}
     \item $P$ - professores;
@@ -64,19 +66,29 @@ A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos
 	\item $S$ - \textit{slots};
 	\item $S_{pri_c}$ - \textit{slots} do turno primário do curso $c$;
 	\item $S_{sec_c}$ - \textit{slots} do turno secundário do curso $c$;
-	\item $T_i$ - pré-requisitos da disciplina $i$;
+	\item $T_i$ - disciplinas às quais a disciplina $i$ deve compartilhar \textit{slots};
 	\item $H_i$ - \textit{slots} prefixados da disciplina $i$;
 	\item $R$ - reuniões;
 	\item $P_r$ - professores da reunião $r$;
 	\item $S_r$ - \textit{slots} da reunião $r$;
 	\item $A$ - casais de professores;
 	\item $G_m$ - grupos de \textit{slots} de tamanho $m$.
+\end{alineascomponto}
+
+Parâmetros:
+
+\begin{alineascomponto}
 	\item $max_p$ - número máximo de créditos do professor $p$;
     \item $min_p$ - número mínimo de créditos do professor $p$;
 	\item $a_{ij}$ - número de alunos que podem cursar as disciplinas $i$ e $j$;
 	\item $b_{pi}$ - nível de preferência do professor $p$ pela disciplina $i$;	
 	\item $crd_i$ - número de créditos da disciplina $i$;
 	\item $n_i$ - número de professores na disciplina $i$;
+\end{alineascomponto}
+
+Variáveis:
+
+\begin{alineascomponto}
     \item $x_{ij}$ - 1 se as disciplinas  $i$ e $j$ compartilham \textit{slot}, 0 caso contrário;
 	\item $y_{is}$ - 1 se a disciplina $i$ está alocada no \textit{slot} $s$, 0 caso contrário
 	\item $w_{ps}$ - 1 se o professor $p$ está associado ao \textit{slot} $s$, 0 caso contrário;
@@ -85,9 +97,9 @@ A seguir estão as variáveis e conjuntos presentes no modelo, onde os conjuntos
 	\item $v_p$ - 1 se o professor $p$ não dá aula na sexta-feira, 0 se não dá aula na segunda-feira.
 \end{alineascomponto} 
 
-A função objetivo define qual alocação é melhor. Para isso ela leva em conta a preferência geral dos professores e os choques de horários das disciplinas. A somatória $\sum a_{ij} * x_{ij}$ representa na função objetivo a soma dos alunos que podem se matricular em disciplinas que compartilham \textit{slots}. A somatória $\sum b_{pi} * z_{pi}$ representa a soma das preferências dos professores. É importante notar que a preferência de um professor por uma disciplinas só é contabilizada se ele estiver associado a essa disciplinas
+A função objetivo define qual alocação é melhor. Para isso ela leva em conta a preferência geral dos professores e os choques de horários das disciplinas. A somatória $\sum a_{ij} * x_{ij}$ representa, na função objetivo, a soma dos alunos que podem se matricular em disciplinas que compartilham \textit{slots}. A somatória $\sum b_{pi} * z_{pi}$ representa a soma das preferências dos professores. É importante notar que a preferência de um professor por uma disciplinas só é contabilizada se ele estiver associado a essa disciplinas.
 
-É utilizado na função objetivo um valor $\alpha\in[0,1]$. Esse valor balanceia os pesos dos dois lados da função objetivo. Por exemplo, quando $\alpha = 0$, é considerado na função objetivo apenas a preferência dos professores e ignorado o número de alunos que podem fazer pares de disciplinas que compartilham \textit{slots}. Por outro lado, se $\alpha = 1$, é considerado apenas o número de alunos nos choques de horários. Assim, para $\alpha = 0.5$, é dado peso igual para ambos.
+É utilizado na função objetivo um parâmetro $\alpha\in[0,1]$. Esse valor balanceia os pesos dos dois lados da função objetivo. Por exemplo, quando $\alpha = 0$, é considerado na função objetivo apenas a preferência dos professores e ignorado o número de alunos que podem fazer pares de disciplinas que compartilham \textit{slots}. Por outro lado, se $\alpha = 1$, é considerado apenas o número de alunos nos choques de horários. Assim, para $\alpha = 0.5$, é dado peso igual para ambos.
 
 \emph{Função Objetivo:}
 $$
@@ -170,7 +182,7 @@ A Restrição \ref{r14} diz que se duas disciplinas partilham pelo menos um \tex
 y_{is} + y_{js} \leq x_{ij} + 1, \forall{s}\in{S}, \forall{i, j}\in{D} &&
 \end{eqnarray}
 
-As Restrições \ref{r15}, \ref{r16} e \ref{r17} referem-se as disciplinas obrigatórias, elas dizem que se as cargas horárias das disciplinas obrigatórias de um semestre de um curso são superiores a carga horária do turno primário desse curso, então essas disciplinas devem ser alocadas no horário primário e secundário do curso, de forma que o turno primário esteja completamente preenchido, caso contrário, todas as disciplinas devem ser alocadas no horário primário do curso. Note que na Restrição \ref{r16}, quando $u_{ck} = 0$, temos que $(1 - u_{kc}) * 10 = 10$, o que garante que o turno primário do curso $c$ esteja preenchido por disciplinas obrigatórias do semestre $k$ do mesmo curso. Já na Restrição \ref{r17}, quando $u_{ck} = 0$, $(1 - u_{kc}) * (-20+\sum_{i \in{D_{kc}^{ob}}}^{}{crd_i})$ é igual ao número de créditos excedentes, o que garante que o excedente de créditos do semestre seja alocado no turno secundário do curso.
+As Restrições \ref{r15}, \ref{r16} e \ref{r17} referem-se às disciplinas obrigatórias. Elas dizem que se as cargas horárias das disciplinas obrigatórias de um semestre de um curso são superiores à carga horária do turno primário desse curso, então essas disciplinas devem ser alocadas no horário primário e secundário do curso, de forma que o turno primário esteja completamente preenchido; caso contrário, todas as disciplinas devem ser alocadas no horário primário do curso. Note que na Restrição \ref{r16}, quando $u_{ck} = 0$, temos que $(1 - u_{kc}) * 10 = 10$, o que garante que o turno primário do curso $c$ esteja preenchido por disciplinas obrigatórias do semestre $k$ do mesmo curso. Já na Restrição \ref{r17}, quando $u_{ck} = 0$, $(1 - u_{kc}) * (-20+\sum_{i \in{D_{kc}^{ob}}}^{}{crd_i})$ é igual ao número de créditos excedentes, o que garante que o excedente de créditos do semestre seja alocado no turno secundário do curso.
  
 \begin{eqnarray}
 \label{r15}
@@ -193,14 +205,13 @@ A Restrição \ref{r19} fixa o número de \textit{slots} de um professor em prop
 2 * \sum_{s \in S}^{}{w_{ps}} = \sum_{i \in D}^{}{crd_i * z_{pi}}, \forall{p}\in{P} &&
 \end{eqnarray}
 
-A Restrição \ref{r20} diz que se um professor está associado a uma disciplina, ele também está associado aos \textit{slots} dessa disciplina. Nos casos em que $w_{ps} = 1$, temos $y_{is} = 1$ e $z_{pi} = 1$, ou $y_{is} = 1$ e $z_{pi} = 0$. O primeiro caso ocorre quando temos a associação disciplinas/\textit{slot}, professor/disciplinas e professor/\textit{slot}. O segundo caso ocorre quando temos que o professor está associado ao \textit{slot} $s$, mas por outra disciplina.
-A garantia que apenas esses dois casos ocorrem é dada pelas Restrições \ref{r18} e \ref{r19}. 
+A Restrição \ref{r20} diz que se um professor está associado a uma disciplina, ele também está associado aos \textit{slots} dessa disciplina. A garantia de que essa restrição funciona é dada pelas Restrições \ref{r18} e \ref{r19}. 
 \begin{eqnarray}
 \label{r20}
 y_{is} + z_{pi} \le w_{ps} + 1, \forall{p}\in{P}, \forall{s}\in{S}, \forall{i}\in{D} &&
 \end{eqnarray}
 
-A Restrição \ref{r21} define que uma disciplina deve compartilhar \textit{slots} com seus pré-requisitos.
+A Restrição \ref{r21} define que uma disciplina deve compartilhar \textit{slots} com um conjunto prefixado de disciplinas.
 \begin{eqnarray}
 \label{r21}
 x_{ij} = 1, \forall{j\in{T_i}},\forall{i \in{D}} &&
