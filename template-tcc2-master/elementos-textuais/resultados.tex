@@ -7,7 +7,7 @@ Todos os experimentos foram realizados em um computador com processador \textit{
 
 Os testes foram realizados sobre as ofertas de disciplinas da UFC-Quixadá do semestre 2016.2. Os dados contam com 108 ofertas de disciplinas divididas em 6 cursos. São ao todo 58 professores, e a preferência de um professor por uma disciplina foi dada pelo número de vezes que esse professor ministrou essa disciplina no campus. O número de alunos nos choques de horários das disciplinas é definido de forma aleatória, já que não foi possível conseguir essas informações para os testes. Primeiramente é atribuído a cada disciplina um valor entre 10 e 50 (incluindo os extremos) referente ao número de alunos que podem cursar cada disciplina. Depois, para cada par $(a, b)$ de disciplinas, sorteamos um valor entre 0 e o mínimo do número de alunos de $a$ e $b$ para definir a interseção de alunos entre as duas disciplinas. O valor definido para a interseção passa a ser então o número de alunos que podem cursar as duas disciplinas.
 
-A partir do conjunto de dados obtido, utilizando a linguagem de programação \textit{Python 2.7} \cite{python} para automatizar o processamento dos dados, e o banco de dados \textit{SQLite 3.11} \cite{sqlite} para armazená-los, ambos escolhidos pela facilidade de uso. Preparamos aleatoriamente instâncias com diferentes proporções dos dados reais, ou seja, instâncias com 10\%, 20\%, ..., 90\% e 100\% dos professores e disciplinas escolhidos de forma aleatória (exemplo: 10\% dos professores e 10\% das disciplinas). Aplicamos essas instâncias para valores de $\alpha \in{\{0, 0.5, 1\}}$, e definimos um \textit{timeout} de 10 horas.
+A partir do conjunto de dados obtido, utilizando a linguagem de programação \textit{Python 2.7} \cite{python} para automatizar o processamento dos dados, e o banco de dados \textit{SQLite 3.11} \cite{sqlite} para armazená-los, ambos escolhidos pela facilidade de uso. Preparamos aleatoriamente instâncias com diferentes proporções dos dados reais, ou seja, instâncias com 10\%, 20\%, ..., 90\% e 100\% dos professores e disciplinas escolhidos de forma aleatória (exemplo: 10\% dos professores e 10\% das disciplinas). Aplicamos essas instâncias para valores de $\alpha \in{\{0, 0.5, 1\}}$, e definimos um tempo limite de execução de 10 horas.
 
 É importante lembrar que as alocações produzidas com $\alpha = 1$ não levam em consideração a preferência dos professores e são possivelmente alocações indesejáveis e não aplicáveis à UFC-Quixadá. Os testes realizados para esse valor têm intuito apenas de avaliar o desempenho do modelo quando são desconsideradas as preferências por disciplinas dos professores.
 
@@ -58,7 +58,7 @@ A Tabela \oldref{tabela-experimentos} apresenta o resultado dos experimentos par
 			                      &   1 & 10153.70 & Nenhuma solução (Excedeu a memória)\\
 			\midrule
 			\multirow{3}{*}{100\%}&   0 &  4611.18 & Nenhuma solução (Excedeu a memória)\\
-			                      & 0.5 & 36001.29 & Solução viável (Timeout) \\
+			                      & 0.5 & 36001.29 & Solução viável (Atingiu o tempo limite) \\
 			                      &   1 & 21974.03 & Nenhuma solução (Excedeu a memória)\\
 			\bottomrule
 		\end{tabular}%
